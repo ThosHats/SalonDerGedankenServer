@@ -1,0 +1,15 @@
+global:
+  default_update_interval: 24h
+
+providers:
+  - id: example_provider
+    enabled: false
+    module: example_provider.py
+    update_interval: 1h
+    region: berlin
+
+  - id: echtzeitmusik
+    enabled: true
+    module: echtzeitmusik_provider.py
+    update_interval: 6h
+    region: berlin

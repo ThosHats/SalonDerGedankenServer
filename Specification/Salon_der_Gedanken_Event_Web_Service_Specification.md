@@ -229,7 +229,8 @@ Each event exposed by the service includes at least:
 - End time (optional)
 - Multi-day flag
 - Cost information
-- Location (address and/or coordinates)
+- Location (address)
+- Geo-coordinates (latitude and longitude)
 - Provider ID
 - Source URL
 - Region
