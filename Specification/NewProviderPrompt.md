@@ -66,7 +66,8 @@ Perform the following steps sequentially and autonomously.
 - **Action**: Update `config.yaml` to include the new provider.
 - **Format**:
   ```yaml
-  - id: <provider_name>
+  - id: <provider_id>   # e.g. theater_im_delphi
+    name: "<Readable Name>" # e.g. "Theater im Delphi"
     enabled: true
     module: <provider_name>_provider.py
     update_interval: 12h

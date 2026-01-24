@@ -19,6 +19,7 @@ class Event(BaseModel):
 
 class ProviderConfig(BaseModel):
     id: str
+    name: Optional[str] = None
     enabled: bool
     module: str
     update_interval: str  # e.g. "24h"

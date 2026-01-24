@@ -3,12 +3,14 @@ global:
 
 providers:
   - id: example_provider
+    name: "Example Provider"
     enabled: false
     module: example_provider.py
     update_interval: 1h
     region: berlin
 
   - id: echtzeitmusik
+    name: "Echtzeitmusik"
     enabled: true
     module: echtzeitmusik_provider.py
     update_interval: 6h
@@ -18,6 +20,7 @@ providers:
     longitude: 13.41053
 
   - id: brotfabrik
+    name: "Brotfabrik Berlin"
     enabled: true
     module: brotfabrik_provider.py
     update_interval: 6h
@@ -27,6 +30,7 @@ providers:
     longitude: 13.4357
 
   - id: theater_im_delphi
+    name: "Theater im Delphi"
     enabled: true
     module: theater_im_delphi_provider.py
     update_interval: 24h
