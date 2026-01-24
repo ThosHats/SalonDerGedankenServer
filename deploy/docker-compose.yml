@@ -1,14 +1,12 @@
 services:
   # The App
   salon-server:
-    # REPLACE <your-username> AND <repo-name> WITH YOUR GITHUB USERNAME AND REPO NAME (LOWERCASE)
-    # Example: ghcr.io/hartkens/salondergedankenserver:latest
-    image: ghcr.io/<your-username>/<repo-name>:latest
+    image: ghcr.io/thoshats/salondergedankenserver:sha-6bceee8
     restart: unless-stopped
     networks:
       - caddy
     labels:
-      caddy: "your-domain.com"
+      caddy: "salondergedanken.bw-papenburg-archiv.de"
       caddy.reverse_proxy: "{{upstreams 8000}}"
     environment:
       # Add any environment variables your app needs here
@@ -31,10 +29,10 @@ services:
 
   # Auto-Updater
   watchtower:
-    image: containrrr/watchtower
+    image: containrrr/watchtower:1.7.1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 300 --cleanup # Check every 5 minutes, remove old images
+    command: --interval 900 --cleanup # Check every 15 minutes, remove old images
     environment:
       - REPO_USER=${GITHUB_USER}
       - REPO_PASS=${GITHUB_TOKEN}

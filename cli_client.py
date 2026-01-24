@@ -3,7 +3,9 @@ import requests
 import sys
 from datetime import datetime
 
-SERVER_URL = "http://localhost:8000"
+# SERVER_URL = "http://localhost:8000"
+SERVER_URL = "https://salondergedanken.bw-papenburg-archiv.de"
+
 
 def fetch_events(provider_id):
     try:
