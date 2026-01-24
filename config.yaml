@@ -13,3 +13,15 @@ providers:
     module: echtzeitmusik_provider.py
     update_interval: 6h
     region: berlin
+    address: "Berlin"
+    latitude: 52.52437
+    longitude: 13.41053
+
+  - id: brotfabrik
+    enabled: true
+    module: brotfabrik_provider.py
+    update_interval: 6h
+    region: berlin
+    address: "Brotfabrik Berlin, Caligariplatz 1, 13086 Berlin"
+    latitude: 52.5518
+    longitude: 13.4357

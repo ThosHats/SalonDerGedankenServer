@@ -70,6 +70,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from datetime import timedelta
 from .storage import EventStorage
+from .geocoding import GeocodingService
 
 class ServiceOrchestrator:
     def __init__(self, config_loader: ConfigLoader, provider_loader: ProviderLoader, storage: EventStorage):
@@ -77,6 +78,7 @@ class ServiceOrchestrator:
         self.provider_loader = provider_loader
         self.storage = storage
         self.scheduler = BackgroundScheduler()
+        self.geocoding_service = GeocodingService()
 
     def start(self):
         self.update_all_providers()
@@ -105,6 +107,31 @@ class ServiceOrchestrator:
                 logger.info(f"Updating provider {config.id}...")
                 provider = self.provider_loader.load_provider(config.module)
                 events = provider.fetch_events()
+                
+                # Enrich with geocoding or provider-level override
+                for event in events:
+                    # 1. First, check if provider has a global configuration (Single-Location Provider)
+                    # If so, and event has no specific location, use it.
+                    if config.address and not event.location:
+                         event.location = config.address
+                    
+                    # 2. Try to get coordinates via Geocoding Service
+                    # This will check cache first. If cache has 'null' (failure), it returns None, None quickly.
+                    if event.location and (event.latitude is None or event.longitude is None):
+                        query = event.location.replace("\n", ", ")
+                        lat, lon = self.geocoding_service.get_coordinates(query)
+                        
+                        if lat and lon:
+                            event.latitude = lat
+                            event.longitude = lon
+                        else:
+                            # Geocoding failed (or was cached as failed).
+                            # Fallback: If provider has global coordinates, use them as "default region/location".
+                            # This fits the requirement: "Falls also dort eine Null eingetragen wird, sind sofort der oder die Location von dem Provider eingetragen."
+                            if config.latitude and config.longitude:
+                                event.latitude = config.latitude
+                                event.longitude = config.longitude
+
                 self.storage.save_events(config.id, events)
                 logger.info(f"Updated {config.id}: {len(events)} events fetched.")
             except Exception as e:

@@ -14,6 +14,8 @@ class Event(BaseModel):
     provider_id: str
     source_url: HttpUrl
     region: Optional[str] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
 
 class ProviderConfig(BaseModel):
     id: str
@@ -22,3 +24,7 @@ class ProviderConfig(BaseModel):
     update_interval: str  # e.g. "24h"
     region: Optional[str] = None
     params: Optional[dict] = {}
+    address: Optional[str] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+

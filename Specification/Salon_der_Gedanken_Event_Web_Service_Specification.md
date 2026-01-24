@@ -121,7 +121,53 @@ Characteristics:
 
 ---
 
-### 5.2 Provider Interface (Conceptual)
+### 5.2 Provider Types
+
+#### 5.2.1 Multi-Location Providers
+
+Multi-location providers publish events that may take place at **different physical locations**.
+
+Characteristics:
+- Each event may have its **own address**
+- Event locations can vary widely
+- The provider itself does **not** represent a single fixed venue
+- Typical examples:
+  - City-wide event calendars
+  - Festival platforms
+  - Aggregators listing events at multiple venues
+
+For these providers:
+- The **event-level address** is considered the primary source of location data
+- Each event is geocoded individually based on its own address
+
+---
+
+#### 5.2.2 Single-Location Providers
+
+Single-location providers offer events that take place **exclusively at one fixed venue**.
+
+Characteristics:
+- All events occur at the **same physical location**
+- The provider represents a concrete venue (e.g. a café, cultural center, salon)
+- Events may omit explicit address information because the location is implicitly known
+
+For these providers:
+- A **provider-level location** is defined
+- This location applies to all events unless explicitly overridden
+
+---
+
+### 5.2.3 Provider-Level Geo Configuration
+
+For single-location providers, a **provider-level location** is defined in the `config.yaml` configuration file.
+
+This location includes:
+- Address (human-readable)
+- Latitude
+- Longitude
+
+
+## 6 Provider Interface (Conceptual)
 
 Each provider module must implement a well-defined interface, e.g.:
 
@@ -135,7 +181,7 @@ They are loaded on demand during each update run.
 
 ---
 
-## 6. Dynamic Provider Loading
+## 7. Dynamic Provider Loading
 
 ### Key Design Principle
 
@@ -149,9 +195,9 @@ They are loaded on demand during each update run.
 
 ---
 
-## 7. Configuration via YAML
+## 8. Configuration via YAML
 
-### 7.1 Configuration File
+### 8.1 Configuration File
 
 - Single YAML configuration file
 - Loaded **before every update cycle**
@@ -160,7 +206,7 @@ They are loaded on demand during each update run.
   - update intervals
   - provider-specific parameters
 
-### 7.2 Example Configuration (Illustrative)
+### 8.2 Example Configuration (Illustrative)
 
 ```yaml
 global:
@@ -172,15 +218,23 @@ providers:
     module: philosophisches_cafe.py
     update_interval: 6h
     region: berlin
+    address: "Sophienstraße 18, 10178 Berlin, Germany"
+    latitude: 52.5201
+    longitude: 13.4059
 
   - id: kulturforum
     enabled: false
     module: kulturforum.py
+    update_interval: 8h
+    region: berlin
+    address: "Partkstrasse 28, 13086 Berlin, Germany"
+    latitude: 59.3401
+    longitude: 12.4045
 ```
 
 ---
 
-### 7.3 Live Reload Behavior
+### 8.3 Live Reload Behavior
 
 - YAML is reloaded before each scheduled update
 - Changes take effect immediately
@@ -188,7 +242,7 @@ providers:
 
 ---
 
-## 8. Update & Scan Scheduling
+## 9. Update & Scan Scheduling
 
 ### Scheduling Rules
 - Global default update interval
@@ -206,7 +260,7 @@ providers:
 
 ---
 
-## 9. Data Storage & Caching
+## 10. Data Storage & Caching
 
 ### Storage Characteristics
 - Internal cache (in-memory or lightweight persistence)
@@ -216,7 +270,7 @@ providers:
 
 ---
 
-## 10. Event Data Model (Service-Level)
+## 11. Event Data Model (Service-Level)
 
 Each event exposed by the service includes at least:
 
@@ -237,7 +291,7 @@ Each event exposed by the service includes at least:
 
 ---
 
-## 11. REST API (Read-Only)
+## 12. REST API (Read-Only)
 
 ### Purpose
 The API exposes **aggregated, preprocessed event data** to client applications.
@@ -252,7 +306,7 @@ The API exposes **aggregated, preprocessed event data** to client applications.
 
 ---
 
-## 12. Error Handling & Stability
+## 13. Error Handling & Stability
 
 - Provider failures do **not** stop the service
 - Each provider is isolated during execution
@@ -261,7 +315,7 @@ The API exposes **aggregated, preprocessed event data** to client applications.
 
 ---
 
-## 13. Security & Operational Considerations
+## 14. Security & Operational Considerations
 
 - No execution of untrusted code
 - Provider modules must be vetted
@@ -271,7 +325,7 @@ The API exposes **aggregated, preprocessed event data** to client applications.
 
 ---
 
-## 14. Design Goals (Summary)
+## 15. Design Goals (Summary)
 
 The Event Aggregation Web Service is designed to be:
 
@@ -283,7 +337,7 @@ The Event Aggregation Web Service is designed to be:
 
 ---
 
-## 15. Out of Scope (for now)
+## 16. Out of Scope (for now)
 
 - User accounts
 - Authentication

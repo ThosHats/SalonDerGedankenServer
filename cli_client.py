@@ -44,6 +44,12 @@ def format_event(event):
             loc_clean = loc_clean[:37] + "..."
         output += f" \033[90m(@ {loc_clean})\033[0m"
     
+    lat = event.get('latitude')
+    lon = event.get('longitude')
+    if lat is not None and lon is not None:
+        output += f" \033[33m[{lat:.4f}, {lon:.4f}]\033[0m"
+
+    
     return output
 
 def main():
