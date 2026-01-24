@@ -164,5 +164,9 @@
         "lon": 13.4291056
     },
     "im Kunsthaus ACUD, Veteranenstra\u00dfe 21, 10119 Berlin": null,
-    "Brotfabrik Berlin, Caligariplatz 1, 13086 Berlin": null
+    "Brotfabrik Berlin, Caligariplatz 1, 13086 Berlin": null,
+    "Gustav-Adolf-Stra\u00dfe 2, 13086 Berlin": {
+        "lat": 52.5519035,
+        "lon": 13.4311632
+    }
 }

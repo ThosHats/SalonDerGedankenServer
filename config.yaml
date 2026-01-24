@@ -25,3 +25,12 @@ providers:
     address: "Brotfabrik Berlin, Caligariplatz 1, 13086 Berlin"
     latitude: 52.5518
     longitude: 13.4357
+
+  - id: theater_im_delphi
+    enabled: true
+    module: theater_im_delphi_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Gustav-Adolf-Straße 2, 13086 Berlin"
+    latitude: 52.551694
+    longitude: 13.431111
