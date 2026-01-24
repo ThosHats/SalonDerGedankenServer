@@ -302,6 +302,8 @@ The API exposes **aggregated, preprocessed event data** to client applications.
 - `GET /events?date=YYYY-MM-DD`
 - `GET /events?from=YYYY-MM-DD&to=YYYY-MM-DD`
 - `GET /providers`
+  - Returns list of configured providers.
+  - Internal details like `module` path are hidden/masked.
 - `GET /status`
 
 ---

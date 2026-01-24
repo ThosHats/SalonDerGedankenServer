@@ -30,7 +30,11 @@ def get_events(
 
 @app.get("/providers", response_model=List[ProviderConfig])
 def get_providers():
-    return config_loader.get_providers_config()
+    configs = config_loader.get_providers_config()
+    # Mask module path for security and client relevance
+    for config in configs:
+        config.module = "***"
+    return configs
 
 @app.get("/status")
 def get_status():

@@ -52,22 +52,49 @@ def format_event(event):
     
     return output
 
+def fetch_providers():
+    try:
+        url = f"{SERVER_URL}/providers"
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error connecting to server: {e}")
+        print("Make sure the server is running on http://localhost:8000")
+        sys.exit(1)
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch and display events from Salon der Gedanken Server.")
-    parser.add_argument("provider_id", help="The ID of the provider to fetch events for (e.g., 'echtzeitmusik')")
+    parser.add_argument("command", help="Command: 'providers' to list providers, or a <provider_id> to fetch events.")
     
     args = parser.parse_args()
     
-    print(f"Fetching events for provider: \033[36m{args.provider_id}\033[0m...")
-    events = fetch_events(args.provider_id)
-    
-    if not events:
-        print("No events found.")
-        return
+    if args.command == "providers":
+        print("Fetching providers...")
+        providers = fetch_providers()
+        
+        if not providers:
+            print("No providers found.")
+            return
 
-    print(f"Found {len(events)} events:\n")
-    for event in events:
-        print(format_event(event))
+        print(f"Found {len(providers)} configured providers:\n")
+        print(f"{'ID':<20} | {'Name':<25} | {'Enabled':<8} | {'Region'}")
+        print("-" * 70)
+        for p in providers:
+            name = p.get('name') or "N/A"
+            print(f"{p['id']:<20} | {name:<25} | {str(p['enabled']):<8} | {p.get('region') or ''}")
+    else:
+        provider_id = args.command
+        print(f"Fetching events for provider: \033[36m{provider_id}\033[0m...")
+        events = fetch_events(provider_id)
+        
+        if not events:
+            print("No events found.")
+            return
+
+        print(f"Found {len(events)} events:\n")
+        for event in events:
+            print(format_event(event))
 
 if __name__ == "__main__":
     main()
