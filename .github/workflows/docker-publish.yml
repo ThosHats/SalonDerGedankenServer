@@ -11,8 +11,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -45,3 +44,19 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Deploy on VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            set -e
+            cd /opt/salondergedanken
+            # Ensure we pull the latest version of the image
+            docker compose pull
+            # Recreate containers to apply changes
+            docker compose up -d
+            # Optional: Clean up old images to save space
+            docker image prune -f

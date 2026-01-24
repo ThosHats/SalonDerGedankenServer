@@ -27,16 +27,6 @@ services:
       - caddy_data:/data
     restart: unless-stopped
 
-  # Auto-Updater
-  watchtower:
-    image: containrrr/watchtower:1.7.1
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 900 --cleanup # Check every 15 minutes, remove old images
-    environment:
-      - REPO_USER=${GITHUB_USER}
-      - REPO_PASS=${GITHUB_TOKEN}
-
 networks:
   caddy:
     external: true
