@@ -168,5 +168,34 @@
     "Gustav-Adolf-Stra\u00dfe 2, 13086 Berlin": {
         "lat": 52.5519035,
         "lon": 13.4311632
+    },
+    "Gerichtstra\u00dfe 35, 13347 Berlin Wedding": {
+        "lat": 52.5456853,
+        "lon": 13.36649
+    },
+    "Donaustra\u00dfe 79 12043 Berlin": {
+        "lat": 52.478241,
+        "lon": 13.442865
+    },
+    "M108, Neue Jakobstra\u00dfe 9, 10179 Berlin": null,
+    "Weserstra\u00dfe 54, 12045 Berlin Neuk\u00f6lln": {
+        "lat": 52.4834444,
+        "lon": 13.4405378
+    },
+    "Prinzenallee 60, 13359 Berlin": {
+        "lat": 52.5576252,
+        "lon": 13.3851979
+    },
+    "Kaskelstra\u00dfe 55 10317 Berlin (S-Bahnhof N\u00f6ldnerplatz)": {
+        "lat": 52.5048444,
+        "lon": 13.4834737
+    },
+    "Kaskelstra\u00dfe 55 10317 Berlin": {
+        "lat": 52.5048444,
+        "lon": 13.4834737
+    },
+    "Weichselstra\u00dfe 49\r, 12045 Berlin Neuk\u00f6lln": {
+        "lat": 52.4869026,
+        "lon": 13.4360483
     }
 }
