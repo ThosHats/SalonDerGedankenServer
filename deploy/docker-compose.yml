@@ -1,7 +1,7 @@
 services:
   # The App
   salon-server:
-    image: ghcr.io/thoshats/salondergedankenserver:sha-6bceee8
+    image: ghcr.io/thoshats/salondergedankenserver:latest
     restart: unless-stopped
     networks:
       - caddy
