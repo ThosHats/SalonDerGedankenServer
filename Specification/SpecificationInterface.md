@@ -20,7 +20,7 @@ Retrieves the configuration of all registered event providers. This endpoint all
 *   **Response**:
     *   **Status Code**: `200 OK`
     *   **Content-Type**: `application/json`
-    *   **Body**: List of [ProviderConfig](#22-providerconfig-object) objects.
+    *   **Body**: a `ProviderListResponse` object containing the API version and a list of providers.
 
 **Example Request:**
 ```http
@@ -30,46 +30,52 @@ Host: localhost:8000
 
 **Example Response:**
 ```json
-[
-  {
-    "id": "theater_im_delphi",
-    "name": "Theater im Delphi",
-    "enabled": true,
-    "module": "***",
-    "update_interval": "24h",
-    "region": "berlin",
-    "params": {},
-    "address": "Gustav-Adolf-Straße 2, 13086 Berlin",
-    "latitude": 52.551694,
-    "longitude": 13.431111
-  },
-  {
-    "id": "echtzeitmusik",
-    "name": "Echtzeitmusik",
-    "enabled": true,
-    "module": "***",
-    "update_interval": "6h",
-    "region": "berlin",
-    "params": {},
-    "address": "Berlin",
-    "latitude": 52.52437,
-    "longitude": 13.41053
-  }
-]
+{
+  "version": "1.0.0",
+  "providers": [
+    {
+      "id": "theater_im_delphi",
+      "name": "Theater im Delphi",
+      "enabled": true,
+      "module": "***",
+      "update_interval": "24h",
+      "region": "berlin",
+      "params": {},
+      "address": "Gustav-Adolf-Straße 2, 13086 Berlin",
+      "latitude": 52.551694,
+      "longitude": 13.431111
+    },
+    {
+      "id": "echtzeitmusik",
+      "name": "Echtzeitmusik",
+      "enabled": true,
+      "module": "***",
+      "update_interval": "6h",
+      "region": "berlin",
+      "params": {},
+      "address": "Berlin",
+      "latitude": 52.52437,
+      "longitude": 13.41053
+    }
+  ]
+}
 ```
 
 ---
 
 ### 1.2 List Events (`GET /events`)
 
-Retrieves a list of aggregated events. Can be filtered by a specific provider.
+Retrieves a list of aggregated events. Can be filtered by a specific provider, a specific date, or a date range.
 
 *   **URL**: `/events`
 *   **Method**: `GET`
-*   **Description**: Fethess events currently held in the server's storage.
+*   **Description**: Fetches events currently held in the server's storage.
 *   **Parameters**:
     *   **Query Parameters**:
-        *   `provider_id` (string, optional): The ID of a provider to filter events by. If omitted, events from all providers are returned.
+        *   `provider_id` (string, optional): The ID of a provider to filter events by.
+        *   `date` (string, optional): A specific date to filter events (Format: `YYYY-MM-DD`).
+        *   `from` (string, optional): Start date for a range filter (Format: `YYYY-MM-DD`).
+        *   `to` (string, optional): End date for a range filter (Format: `YYYY-MM-DD`).
 
 *   **Response**:
     *   **Status Code**: `200 OK`
@@ -82,9 +88,15 @@ GET /events HTTP/1.1
 Host: localhost:8000
 ```
 
-**Example Request (Filtered):**
+**Example Request (Filtered by Provider):**
 ```http
 GET /events?provider_id=theater_im_delphi HTTP/1.1
+Host: localhost:8000
+```
+
+**Example Request (Filtered by Date Range):**
+```http
+GET /events?from=2026-05-01&to=2026-05-31 HTTP/1.1
 Host: localhost:8000
 ```
 
