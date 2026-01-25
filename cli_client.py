@@ -68,8 +68,13 @@ def fetch_providers():
 def main():
     parser = argparse.ArgumentParser(description="Fetch and display events from Salon der Gedanken Server.")
     parser.add_argument("command", help="Command: 'providers' to list providers, or a <provider_id> to fetch events.")
+    parser.add_argument("--local", action="store_true", help="Use localhost:8000 instead of the production server.")
     
     args = parser.parse_args()
+
+    if args.local:
+        global SERVER_URL
+        SERVER_URL = "http://localhost:8000"
     
     if args.command == "providers":
         print("Fetching providers...")
