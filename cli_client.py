@@ -78,13 +78,21 @@ def main():
     
     if args.command == "providers":
         print("Fetching providers...")
-        providers = fetch_providers()
+        data = fetch_providers()
+        
+        # Backward compatibility check (in case server is old but client is new, though unlikely in this mono-repo context)
+        if isinstance(data, list):
+            providers = data
+            version = "unknown"
+        else:
+            providers = data.get("providers", [])
+            version = data.get("version", "unknown")
         
         if not providers:
-            print("No providers found.")
+            print(f"No providers found (API Version: {version}).")
             return
 
-        print(f"Found {len(providers)} configured providers:\n")
+        print(f"Found {len(providers)} configured providers (API Version: {version}):\n")
         print(f"{'ID':<20} | {'Name':<25} | {'Enabled':<8} | {'Region':<15} | {'Location'}")
         print("-" * 105)
         for p in providers:
