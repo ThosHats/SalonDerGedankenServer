@@ -93,6 +93,14 @@ class ServiceOrchestrator:
         self.scheduler.add_job(self.update_all_providers, 'interval', minutes=15) # Check every 15 mins
         self.scheduler.start()
 
+    def force_reload(self):
+        """
+        Manually triggers an immediate update of all providers.
+        This is intended to be called asynchronously.
+        """
+        logger.info("Force reload triggered via API.")
+        self.update_all_providers()
+
     def update_all_providers(self):
         logger.info("Starting update cycle...")
         configs = self.config_loader.get_providers_config()
