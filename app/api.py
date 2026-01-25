@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query, HTTPException, BackgroundTasks
 from typing import List, Optional
 from .models import Event, ProviderConfig, ProviderListResponse
 from .core import ServiceOrchestrator, ConfigLoader, ProviderLoader
@@ -46,3 +46,8 @@ def get_providers():
 @app.get("/status")
 def get_status():
     return {"status": "running", "providers_loaded": len(config_loader.get_providers_config())}
+
+@app.post("/refresh", status_code=202)
+def refresh_events(background_tasks: BackgroundTasks):
+    background_tasks.add_task(orchestrator.force_reload)
+    return {"status": "reload_initiated"}

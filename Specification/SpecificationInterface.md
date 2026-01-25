@@ -145,6 +145,35 @@ Checks the health and status of the service.
 
 ---
 
+### 1.4 Force Reload (`POST /refresh`)
+
+Triggers an immediate, asynchronous reload of all enabled providers. This forces the server to fetch fresh data from external sources, disregarding the scheduled update interval.
+
+*   **URL**: `/refresh`
+*   **Method**: `POST`
+*   **Description**: Initiates a background update cycle for all providers.
+*   **Parameters**: None
+*   **Response**:
+    *   **Status Code**: `202 Accepted`
+    *   **Content-Type**: `application/json`
+    *   **Body**: Status message.
+
+**Example Request:**
+```http
+POST /refresh HTTP/1.1
+Host: localhost:8000
+Content-Length: 0
+```
+
+**Example Response:**
+```json
+{
+  "status": "reload_initiated"
+}
+```
+
+---
+
 ## 2. Data Models
 
 ### 2.1 Event Object

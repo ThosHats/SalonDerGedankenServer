@@ -65,16 +65,39 @@ def fetch_providers():
         print("Make sure the server is running on http://localhost:8000")
         sys.exit(1)
 
+def trigger_reload():
+    try:
+        url = f"{SERVER_URL}/refresh"
+        # Since it's a POST request, even with no body, we pass data or json empty if needed, usually empty post is fine.
+        response = requests.post(url)
+        response.raise_for_status()
+        print("Reload initiated successfully.")
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error triggering reload: {e}")
+        print("Make sure the server is running on http://localhost:8000")
+        sys.exit(1)
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch and display events from Salon der Gedanken Server.")
-    parser.add_argument("command", help="Command: 'providers' to list providers, or a <provider_id> to fetch events.")
+    parser.add_argument("command", nargs="?", help="Command: 'providers' to list providers, or a <provider_id> to fetch events.")
     parser.add_argument("--local", action="store_true", help="Use localhost:8000 instead of the production server.")
+    parser.add_argument("--reload", action="store_true", help="Trigger a forced reload of events from all providers.")
     
     args = parser.parse_args()
 
     if args.local:
         global SERVER_URL
         SERVER_URL = "http://localhost:8000"
+
+    if args.reload:
+        print("Triggering forced reload...")
+        trigger_reload()
+        return
+    
+    if not args.command:
+        parser.print_help()
+        return
     
     if args.command == "providers":
         print("Fetching providers...")
