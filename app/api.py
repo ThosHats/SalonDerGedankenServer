@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query, HTTPException
 from typing import List, Optional
-from .models import Event, ProviderConfig
+from .models import Event, ProviderConfig, ProviderListResponse
 from .core import ServiceOrchestrator, ConfigLoader, ProviderLoader
 from .storage import EventStorage
 
@@ -28,8 +28,11 @@ def get_events(
         events = storage.get_all_events()
     return events
 
-@app.get("/providers", response_model=List[ProviderConfig])
+@app.get("/providers", response_model=ProviderListResponse)
 def get_providers():
+    raw_config = config_loader.load_config()
+    version = str(raw_config.get("version", "unknown"))
+    
     configs = config_loader.get_providers_config()
     # Filter only enabled providers
     enabled_configs = [c for c in configs if c.enabled]
@@ -37,7 +40,8 @@ def get_providers():
     # Mask module path for security and client relevance
     for config in enabled_configs:
         config.module = "***"
-    return enabled_configs
+        
+    return ProviderListResponse(version=version, providers=enabled_configs)
 
 @app.get("/status")
 def get_status():

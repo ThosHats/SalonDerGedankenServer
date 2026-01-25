@@ -29,3 +29,6 @@ class ProviderConfig(BaseModel):
     latitude: Optional[float] = None
     longitude: Optional[float] = None
 
+class ProviderListResponse(BaseModel):
+    version: str
+    providers: List[ProviderConfig]
