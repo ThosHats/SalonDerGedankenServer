@@ -31,10 +31,13 @@ def get_events(
 @app.get("/providers", response_model=List[ProviderConfig])
 def get_providers():
     configs = config_loader.get_providers_config()
+    # Filter only enabled providers
+    enabled_configs = [c for c in configs if c.enabled]
+    
     # Mask module path for security and client relevance
-    for config in configs:
+    for config in enabled_configs:
         config.module = "***"
-    return configs
+    return enabled_configs
 
 @app.get("/status")
 def get_status():
