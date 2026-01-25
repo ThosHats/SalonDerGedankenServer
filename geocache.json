@@ -197,5 +197,24 @@
     "Weichselstra\u00dfe 49\r, 12045 Berlin Neuk\u00f6lln": {
         "lat": 52.4869026,
         "lon": 13.4360483
-    }
+    },
+    "Antonplatz 1, 13086 Berlin": {
+        "lat": 52.5487495,
+        "lon": 13.4506766
+    },
+    "Berliner Allee 125, 13088 Berlin": {
+        "lat": 52.5509153,
+        "lon": 13.4615708
+    },
+    "Streustra\u00dfe 90, 13086 Berlin": {
+        "lat": 52.5510653,
+        "lon": 13.4388651
+    },
+    "B\u00fchringstra\u00dfe 20, 13086 Berlin": {
+        "lat": 52.5580111,
+        "lon": 13.4393228
+    },
+    "H\u00f6rsaal, C1.05, room C1.05, building 6, floor 1, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null,
+    "Kunsthalle am Hamburger Platz, room , building 0, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null,
+    "Aula, D1.02, room D1.02, building 4, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null
 }
