@@ -68,8 +68,13 @@ def fetch_providers():
 def main():
     parser = argparse.ArgumentParser(description="Fetch and display events from Salon der Gedanken Server.")
     parser.add_argument("command", help="Command: 'providers' to list providers, or a <provider_id> to fetch events.")
+    parser.add_argument("--local", action="store_true", help="Use localhost:8000 instead of the production server.")
     
     args = parser.parse_args()
+
+    if args.local:
+        global SERVER_URL
+        SERVER_URL = "http://localhost:8000"
     
     if args.command == "providers":
         print("Fetching providers...")
@@ -80,11 +85,17 @@ def main():
             return
 
         print(f"Found {len(providers)} configured providers:\n")
-        print(f"{'ID':<20} | {'Name':<25} | {'Enabled':<8} | {'Region'}")
-        print("-" * 70)
+        print(f"{'ID':<20} | {'Name':<25} | {'Enabled':<8} | {'Region':<15} | {'Location'}")
+        print("-" * 105)
         for p in providers:
             name = p.get('name') or "N/A"
-            print(f"{p['id']:<20} | {name:<25} | {str(p['enabled']):<8} | {p.get('region') or ''}")
+            lat = p.get('latitude')
+            lon = p.get('longitude')
+            location_str = ""
+            if lat is not None and lon is not None:
+                location_str = f"[{lat:.4f}, {lon:.4f}]"
+            
+            print(f"{p['id']:<20} | {name:<25} | {str(p['enabled']):<8} | {p.get('region') or '':<15} | {location_str}")
     else:
         provider_id = args.command
         print(f"Fetching events for provider: \033[36m{provider_id}\033[0m...")

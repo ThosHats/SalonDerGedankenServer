@@ -38,3 +38,43 @@ providers:
     address: "Gustav-Adolf-Straße 2, 13086 Berlin"
     latitude: 52.551694
     longitude: 13.431111
+
+  - id: kino_toni
+    name: "Kino Toni"
+    enabled: true
+    module: kino_toni_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Antonplatz 1, 13086 Berlin"
+    latitude: 52.5488
+    longitude: 13.4509
+
+  - id: peter_edel
+    name: "Bildungs- und Kulturzentrum Peter Edel"
+    enabled: true
+    module: peter_edel_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Berliner Allee 125, 13088 Berlin"
+    latitude: 52.5509
+    longitude: 13.4618
+
+  - id: sexauer
+    name: "Sexauer Gallery"
+    enabled: true
+    module: sexauer_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Streustraße 90, 13086 Berlin"
+    latitude: 52.5509
+    longitude: 13.4394
+
+  - id: kh_berlin
+    name: "Weißensee Kunsthochschule Berlin"
+    enabled: true
+    module: kh_berlin_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Bühringstraße 20, 13086 Berlin"
+    latitude: 52.5577
+    longitude: 13.4387
