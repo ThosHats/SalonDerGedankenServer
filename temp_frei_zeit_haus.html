@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="de-de" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>Veranstaltungen - Frei Zeit Haus e.V.</title>
+	<link href="https://www.frei-zeit-haus.de/index.php?option=com_jevents&amp;task=modlatest.rss&amp;format=feed&amp;type=rss&amp;Itemid=495&amp;modid=0" rel="alternate" type="application/rss+xml" title="RSS 2.0">
+	<link href="https://www.frei-zeit-haus.de/index.php?option=com_jevents&amp;task=modlatest.rss&amp;format=feed&amp;type=atom&amp;Itemid=495&amp;modid=0" rel="alternate" type="application/atom+xml" title="Atom 1.0">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/templates/screendriverFOUR/fonts/font-awesome/css/font-awesome.css">
+
+	<!--<link href="/media/vendor/chosen/css/chosen.css?1.8.7" rel="stylesheet">
+	<link href="/media/system/css/joomla-fontawesome.min.css" rel="stylesheet">
+	<link href="/media/com_jevents/lib_jevmodal/css/jevmodal.css" rel="stylesheet">
+	<link href="/components/com_jevents/assets/css/eventsadmin.css?v=3.6.93" rel="stylesheet">
+	<link href="/components/com_jevents/views/default/assets/css/events_css.css?v=3.6.93" rel="stylesheet">
+	<link href="/media/jbmedia/css/cookies.css?2109fd" rel="stylesheet">
+	<style>.jevfiltertable, .jevfiltertable td, .jevfiltertable tr {
+	border:none;
+}
+.jevfiltertable td {
+	vertical-align:top;
+	padding-bottom:4px;
+}
+.jevfilterlist, .jevfilterfloatlist {
+	list-style-type: none;
+	display:block;
+	margin-left:0px
+}
+.jevfilterlist .jevfilterinput .chzn-container, .jevfilterlist .jevfilterinput input {
+	max-width:100%;
+}
+   .jevfilterfloatlist li {
+	float:left;
+	margin-right:5px;
+}
+.jevfilterfloatlist li li {
+	float:none;
+}</style>
+-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/navigation.css"  />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/navigation_smartphone.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/screendrive.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/responsive.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/readmore.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/entwickler.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR-sidebar/css/sidebar.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/templates/screendriverFOUR/css/leaflet.css" />
+
+	<script type="application/json" class="joomla-script-options new">{"bootstrap.popover":{".hasjevtip":{"animation":true,"container":"#jevents_body","delay":1,"html":true,"placement":"top","template":"<div class=\"popover\" role=\"tooltip\"><div class=\"popover-arrow\"><\/div><h3 class=\"popover-header\"><\/h3><div class=\"popover-body\"><\/div><\/div>","trigger":"hover","offset":[0,10],"boundary":"scrollParent"}},"system.paths":{"root":"","rootFull":"https:\/\/www.frei-zeit-haus.de\/","base":"","baseFull":"https:\/\/www.frei-zeit-haus.de\/"},"csrf.token":"dc89977f99d59dfc13c564ef9289cf6d"}</script>
+	<script src="/media/system/js/core.min.js?a3d8f8"></script>
+	<script src="/media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
+	<script src="/media/legacy/js/jquery-noconflict.min.js?504da4"></script>
+	<script src="/media/vendor/bootstrap/js/modal.min.js?5.3.8" type="module"></script>
+	<script src="/media/vendor/bootstrap/js/popover.min.js?5.3.8" type="module"></script>
+	<script src="/media/mod_menu/js/menu.min.js?2109fd" type="module"></script>
+	<script src="/media/vendor/chosen/js/chosen.jquery.min.js?1.8.7"></script>
+	<script src="/media/legacy/js/joomla-chosen.min.js?2109fd"></script>
+	<script src="/components/com_jevents/assets/js/jQnc.min.js?v=3.6.93"></script>
+	<script src="/media/com_jevents/lib_jevmodal/js/jevmodal.min.js"></script>
+	<script src="/components/com_jevents/assets/js/view_detailJQ.min.js?v=3.6.93"></script>
+	<script src="/modules/mod_jevents_filter/mod_jevents_filter.js?v=3.6.93"></script>
+	<script>
+		jQuery(document).ready(function (){
+			jQuery('.jevfiltermodule select').jchosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Werte eingeben oder ausw\u00e4hlen","placeholder_text_single":"Wert ausw\u00e4hlen","no_results_text":"Keine passenden Ergebnisse gefunden."});
+		});
+	</script>
+	<script>document.addEventListener('DOMContentLoaded', function() {
+   // bootstrap may not be available if this module is loaded remotely
+    if (typeof bootstrap === 'undefined') return;
+   var elements = document.querySelectorAll(".hasjevtip");
+   elements.forEach(function(myPopoverTrigger)
+   {
+        myPopoverTrigger.addEventListener('inserted.bs.popover', function () {
+            var title = myPopoverTrigger.getAttribute('data-bs-original-title') || false;
+            const popover = bootstrap.Popover.getInstance(myPopoverTrigger);
+            if (popover && popover.tip) 
+            {
+                var header = popover.tip.querySelector('.popover-header');
+                var body = popover.tip.querySelector('.popover-body');
+                var popoverContent = "";
+                if (title)
+                {
+                    popoverContent += title;
+                }
+                var content = myPopoverTrigger.getAttribute('data-bs-original-content') || false;
+                if (content)
+                {
+                    popoverContent += content;
+                }
+
+                if (header) {
+                    header.outerHTML = popoverContent;
+                }
+                else if (body) {
+                    body.outerHTML = popoverContent;
+                }
+
+                if (popover.tip.querySelector('.jev-click-to-open a') && 'ontouchstart' in document.documentElement)
+                {
+                    popover.tip.addEventListener('touchstart', function() {
+                       document.location = popover.tip.querySelector('.jev-click-to-open a').href;
+                    });
+                }
+            }
+        });
+
+        var title = myPopoverTrigger.getAttribute('data-bs-original-title') || false;
+        const popover = bootstrap.Popover.getInstance(myPopoverTrigger);
+        if (popover && (popover.tip || title)) 
+        {
+            if ('ontouchstart' in document.documentElement) {        
+                myPopoverTrigger.addEventListener('click', preventPopoverTriggerClick);
+            }
+        }
+   });
+});
+function preventPopoverTriggerClick(event)
+{
+    event.preventDefault();
+}
+</script>
+	<script>try {
+	JeventsFilters.filters.push(
+		{
+			id:'category_fv',
+			value:0
+		}
+	);
+}
+catch (e) {}
+function resetcategory_fvs(){
+	if (document.getElementById('catidsfv')) {
+		document.getElementById('catidsfv').value=0;
+	}
+	jQuery('#category_fv option').each(function(idx, item){
+		item.selected=(item.value==0)?true:false;
+	})
+};
+try {
+	JeventsFilters.filters.push(
+		{
+			action:'resetcategory_fvs()',
+			id:'category_fv',
+			value:0
+		}
+	);
+}
+catch (e) {}</script>
+	<script>try {JeventsFilters.filters.push({id:'search_fv',value:''});} catch (e) {}</script>
+	<script>try {JeventsFilters.filters.push({id:'catidsfv',value:0});} catch (e) {}
+</script>
+
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/templates/screendriverFOUR/js/modernizr.js"></script>
+	<script type="text/javascript" src="/templates/screendriverFOUR/js/breakpoints.js"></script>
+	<script type="text/javascript" src="/templates/screendriverFOUR/js/leaflet.js"></script> 
+	<style>
+		/*sidebar*/
+		.fa {padding-right: 8px;}
+		table td {
+			text-align: left;
+			vertical-align: top;
+			padding: 0px 12px 4px 0px;
+		}
+		table #caption {display: none;}
+
+		.mod_events_latest_table,
+		.mod_events_latest_table a  {color: white};
+
+		h3.listing,  h3.listing a{margin-top: 4px;color: white}
+		input.evsearch {padding: 0px;border: 1px solid #aaa;border-radius: 4px;}
+		input.modfilter_button {padding: 0px 8px;border: 1px solid #aaa;border-radius: 4px;}
+	</style>
+</head>
+
+<body class="veranstaltungen"  id="oben"><style>
+.wrap {
+    display: table;
+    margin-top: 28px;
+}
+.wrap .cell.logo {
+    display: table-cell;
+    float: none;
+    vertical-align: bottom;
+    text-align: left;
+    padding:0px 0px 28px 14px;
+}
+.wrap .cell.menu {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    text-align: right;
+    padding:0px 0px 14px 0px;
+}
+.headernavigation {float:left;}
+ul.navbar-nav {float: left !important;}
+
+.cookie {    
+	/*position: absolute;
+    top:2px;
+    left: 2px;*/
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width:auto;
+    height:auto;
+    padding: 8px;
+    z-index: 1002;
+    background-color:#abdbdf;;
+    padding: 8px;
+
+}
+.cookie  p{margin-bottom: 8px}
+.jb-accept.btn.blue
+{
+background-color:#00919f;
+color:white;
+}
+.jb-cookie-title {font-size: 1.2rem;line-height: 1.6rem}
+.jb-decline.link {
+display: block;
+padding: 6px 12px !important;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+background-color:#abdbdf;
+color:white  !important;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+#yellowshark {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50px;
+  right: -120px;
+  z-index: 999;
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+</style>
+
+<div class="cookie">
+	<!--googleoff: all-->
+	<style type="text/css">
+		.jb-decline.link {
+			color: #000000;
+			padding: 0;
+		}
+	</style>
+	<!-- Template Decline -->
+	<div class="jb-cookie-decline  robots-noindex robots-nofollow robots-nocontent" style="display: none;">
+				<span class="jb-decline link">Cookies löschen</span>
+	</div>
+	<!-- Template Default bootstrap -->
+	<div class="jb-cookie top black blue  robots-noindex robots-nofollow robots-nocontent" style="display: none;">
+		<!-- BG color -->
+		<div class="jb-cookie-bg black"></div>
+	    
+		<p class="jb-cookie-title">Für optimalen Benutzerservice auf dieser Webseite verwenden wir Cookies.</p>
+		<p>Durch die Verwendung unserer Webseite erklären Sie sich mit der Verwendung von Cookies einverstanden.					</p>
+		<div class="jb-accept btn blue">Einverstanden</div>
+	</div>
+	
+	
+<!--googleon: all--><script type="text/javascript">
+    jQuery(document).ready(function () { 
+    	function setCookie(c_name,value,exdays,domain) {
+			if (domain != '') {domain = '; domain=' + domain}
+
+			var exdate=new Date();
+			exdate.setDate(exdate.getDate() + exdays);
+			var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/" + domain;
+
+			document.cookie=c_name + "=" + c_value;
+		}
+
+		var $jb_cookie = jQuery('.jb-cookie'),
+			cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)jbcookies\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
+		if (cookieValue === '') { // NO EXIST
+			$jb_cookie.delay(1000).slideDown('fast');
+					} else { // YES EXIST
+				jQuery('.jb-cookie-decline').fadeIn('slow', function() {});
+				}
+
+		jQuery('.jb-accept').click(function() {
+			setCookie("jbcookies","yes",1,"");
+			$jb_cookie.slideUp('slow');
+			jQuery('.jb-cookie-decline').fadeIn('slow', function() {});
+		});
+
+		jQuery('.jb-decline').click(function() {
+			jQuery('.jb-cookie-decline').fadeOut('slow', function() {
+									jQuery('.jb-cookie-decline').find('.hasTooltip').tooltip('hide');
+							});
+			setCookie("jbcookies","",0,"");
+			$jb_cookie.delay(1000).slideDown('fast');
+		});
+    });
+</script>
+
+</div>
+
+<header class="header">
+
+	<div class="container-fluid hidden-xs" >
+		<div class="container" style="background: url('/images/linie-oben.png') no-repeat center bottom;">
+			<div class="wrap">
+				<div class="col-md-9 col-sm-9 cell menu ">
+					<div class="col-xs-12 headerNavigation abstand-all-null">
+											<ul class="mod-menu mod-list nav  navbar-nav">
+<li class="nav-item item-508 deeper parent"><a href="/über-uns/der-verein-freizeithaus.html" >Über Uns</a><ul class="mod-menu__sub list-unstyled small"><li class="nav-item item-511"><a href="/über-uns/der-verein-freizeithaus.html" >Der Verein FreiZeitHaus </a></li><li class="nav-item item-524"><a href="/über-uns/warum-nachbarschaftsarbeit.html" >Warum Nachbarschaftsarbeit?</a></li><li class="nav-item item-522"><a href="/über-uns/team.html" >Team</a></li><li class="nav-item item-552"><a href="/über-uns/ehrenamt.html" >Ehrenamt</a></li><li class="nav-item item-513"><a href="/über-uns/mitglieder.html" >Mitglieder</a></li><li class="nav-item item-525"><a href="/über-uns/unterstützer-innen.html" >Unterstützer:innen</a></li></ul></li><li class="nav-item item-482 deeper parent"><a href="/projekte.html" >Projekte</a><ul class="mod-menu__sub list-unstyled small"><li class="nav-item item-125"><a href="/projekte/stadtteilzentrum-weißensee.html" class="dropdown-toggle sub">Stadtteilzentrum Weißensee</a></li><li class="nav-item item-515"><a href="/projekte/freiwilligenagentur-pankow.html" class="dropdown-toggle sub">FreiwilligenAgentur Pankow </a></li><li class="nav-item item-516"><a href="/projekte/familienzentrum-weißensee.html" class="dropdown-toggle sub">Familienzentrum Weißensee</a></li><li class="nav-item item-517"><a href="/projekte/mobile-stadtteilarbeit.html" class="dropdown-toggle sub">Mobile Stadtteilarbeit </a></li><li class="nav-item item-520"><a href="/projekte/nh-alte-apotheke.html" class="dropdown-toggle sub">NH Alte Apotheke</a></li><li class="nav-item item-518"><a href="/projekte/nachbarschaftstreff-naimo.html" class="dropdown-toggle sub"> Nachbarschaftstreff  NaiMo</a></li><li class="nav-item item-533"><a href="/projekte/schreibabyambulanz.html" class="dropdown-toggle sub">Schreibabyambulanz</a></li><li class="nav-item item-519"><a href="/projekte/kiez.html" class="dropdown-toggle sub">Kiez! Gemeinsam gestalten</a></li></ul></li><li class="nav-item item-509 deeper parent"><a href="/aktuelles.html" >Aktuelles</a><ul class="mod-menu__sub list-unstyled small"><li class="nav-item item-580"><a href="/aktuelles/jubiläum.html" >Jubiläum</a></li></ul></li><li class="nav-item item-529"><a href="https://www.unser-weissensee.de" target="_blank" rel="noopener noreferrer">Blog</a></li><li class="nav-item item-495 current active"><a href="/veranstaltungen.html" aria-current="page">Veranstaltungen</a></li><li class="nav-item item-528"><a href="/spenden.html" >Spenden</a></li></ul>
+
+										</div>
+				</div>
+				<div class="col-md-3 col-sm-3 cell logo" >
+						<a href="/startseite.html" title="zur Startseite">
+							<img src="/images/logo-freizeithaus-ev.png" border="0" alt="Logo Frei-zeit-Haus e.v." />
+						</a>
+					<!--<div id="yellowshark">
+						<a href="/spenden.html"> <img src="/images/stoerer_spenden.svg" alt="geht in die Schulen" border="0"></a>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- header Smartphone -->
+	<div class="container-fluid hidden-lg hidden-md hidden-sm">
+		<div class="container" >
+			<div class="row">
+				<div class="col-xs-8">
+					<a href="/startseite.html" title="zur Startseite">
+						<!--<img src="/images/eric-lasse-steuerberatung.png" border="0" alt="Logo Steuerbüro Lasse" />-->
+						<img src="/images/logo-freizeithaus-ev.png" border="0" alt="Logo Frei-zeit-Haus e.v." />
+					</a>
+				</div>
+				<!-- Burger smartphone-->
+				<div class="col-xs-2 col-xs-offset-2   text-right" >
+		  			<a href="#" data-toggle="collapse" data-target="#navbar-smartphone">
+						<!--<i class="fa fa-bars fa-1x" style="color:#7e7e7e;"></i>-->
+				 		<img src="/templates/screendriverFOUR/bilder/burger-menu.svg" border="0" alt="Burger Mneu"/>
+		  			</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--  smartphonenavigation-->
+		<div class="container">
+			<nav class="navbar" role="navigation">
+				<div class="collapse navbar-collapse"  id="navbar-smartphone">
+					<ul class="mod-menu mod-list nav  mobilmenu">
+<li class="nav-item item-508 deeper parent"><a href="/über-uns/der-verein-freizeithaus.html" >Über Uns</a><ul class="mod-menu__sub list-unstyled small"><li class="nav-item item-511"><a href="/über-uns/der-verein-freizeithaus.html" >Der Verein FreiZeitHaus </a></li><li class="nav-item item-524"><a href="/über-uns/warum-nachbarschaftsarbeit.html" >Warum Nachbarschaftsarbeit?</a></li><li class="nav-item item-522"><a href="/über-uns/team.html" >Team</a></li><li class="nav-item item-552"><a href="/über-uns/ehrenamt.html" >Ehrenamt</a></li><li class="nav-item item-513"><a href="/über-uns/mitglieder.html" >Mitglieder</a></li><li class="nav-item item-525"><a href="/über-uns/unterstützer-innen.html" >Unterstützer:innen</a></li></ul></li><li class="nav-item item-482 deeper parent"><a href="/projekte.html" >Projekte</a><ul class="mod-menu__sub list-unstyled small"><li class="nav-item item-125"><a href="/projekte/stadtteilzentrum-weißensee.html" class="dropdown-toggle sub">Stadtteilzentrum Weißensee</a></li><li class="nav-item item-515"><a href="/projekte/freiwilligenagentur-pankow.html" class="dropdown-toggle sub">FreiwilligenAgentur Pankow </a></li><li class="nav-item item-516"><a href="/projekte/familienzentrum-weißensee.html" class="dropdown-toggle sub">Familienzentrum Weißensee</a></li><li class="nav-item item-517"><a href="/projekte/mobile-stadtteilarbeit.html" class="dropdown-toggle sub">Mobile Stadtteilarbeit </a></li><li class="nav-item item-520"><a href="/projekte/nh-alte-apotheke.html" class="dropdown-toggle sub">NH Alte Apotheke</a></li><li class="nav-item item-518"><a href="/projekte/nachbarschaftstreff-naimo.html" class="dropdown-toggle sub"> Nachbarschaftstreff  NaiMo</a></li><li class="nav-item item-533"><a href="/projekte/schreibabyambulanz.html" class="dropdown-toggle sub">Schreibabyambulanz</a></li><li class="nav-item item-519"><a href="/projekte/kiez.html" class="dropdown-toggle sub">Kiez! Gemeinsam gestalten</a></li></ul></li><li class="nav-item item-509 deeper parent"><a href="/aktuelles.html" >Aktuelles</a><ul class="mod-menu__sub list-unstyled small"><li class="nav-item item-580"><a href="/aktuelles/jubiläum.html" >Jubiläum</a></li></ul></li><li class="nav-item item-529"><a href="https://www.unser-weissensee.de" target="_blank" rel="noopener noreferrer">Blog</a></li><li class="nav-item item-495 current active"><a href="/veranstaltungen.html" aria-current="page">Veranstaltungen</a></li><li class="nav-item item-528"><a href="/spenden.html" >Spenden</a></li></ul>
+
+				</div>
+			</nav>
+		</div>
+	</div>
+
+
+
+</header>
+
+
+<main>
+	<div class="container-fluid no-pic">
+		<div class="container">
+
+							<div class="dev">events</div>
+				<div class="col-xs-12  abstand-all-null hidden-xs">					
+					
+<div id="mod-custom365" class="mod-custom custom">
+    </div>
+						
+				</div>
+			
+			<div class="row">
+				<div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 inhalt">
+
+					
+						<div class="col-xs-12 abstand-breite-null hidden-xs">
+							<h1>Veranstaltungen</h1>
+									<form action="/veranstaltungen/eventsnachjahr/2026/-.html" id="jeventspost" name="jeventspost316" method="post"
+	      class="jevfiltermodule">
+		<input type='hidden' name='catids' id='catidsfv' value=''/>
+		<input type='hidden' name='option' value='com_jevents'/>
+						<table class="jevfiltertable b">
+					<tr>
+														<td><label class='evcategory_label' for='category_fv'>Bitte eine Kategorie auswählen</label></td>
+								
+															<td><label class='evsearch_label' for='search_fv'>Event suchen</label></td>
+								
+														<td>&nbsp;</td>
+											</tr>
+					<tr>
+													<td>			    <label class="sr-only " for="category_fv">Eine Kategorie auswählen um die Liste zu filtern</label>
+			    <select name="category_fv" class="gsl-select"  onchange="if (document.getElementById('catidsfv')) document.getElementById('catidsfv').value=this.value;submit(this.form)"   id="category_fv" >
+				<option value=""  >Alle Kategorien</option>
+							<option value="230" data-level="1" data-colour="#e4003a">Stadtteilzentrum Wei&szlig;ensee</option>
+<option value="231" data-level="1" data-colour="#911f5f">Familienzentrum Wei&szlig;ensee</option>
+<option value="232" data-level="1" data-colour="#7a852a">Freiwilligenagentur Pankow</option>
+<option value="233" data-level="1" data-colour="#0e7e72">Nachbarschaftshaus Alte Apotheke</option>
+<option value="234" data-level="1" data-colour="#e9523d">Kiez! Gemeinsam gestalten.</option>
+<option value="236" data-level="1" data-colour="#007079">MoSt - Mobile Stadtteilarbeit in Wei&szlig;ensee-Ost</option>
+<option value="237" data-level="1" data-colour="#133c67">Nachbarschaftstreff NaiMo</option>
+		    </select>
+		    </td>
+														<td><input type='text' name='search_fv' id='search_fv'  class='evsearch' value="" /></td>
+													<td><input class="modfilter_button" type="submit" value="ok"
+						           name="jevents_filter_submit"/></td>
+					</tr>
+					<tr><td><input class="modfilter_button" style="margin-top:12px;" type="button" onclick="JeventsFilters.reset(this.form)"
+							           value="Zurücksetzen"/></td></tr>
+				</table>
+
+				<input type='hidden' name='filter_reset' id='filter_reset' value='0' />	</form>
+		
+						</div>
+					
+					<div class="col-xs-12 abstand-breite-null">
+						<!-- Event Calendar and Lists Powered by JEvents //-->
+		<div id="jevents">
+	<div class="contentpaneopen jeventpage  jevbootstrap"
+	     id="jevents_header">
+					<h1>
+				test			</h1>
+							<h2 class="contentheading gsl-h2">Terminkalender</h2>
+						<ul class="actions">
+										<li class="print-icon">
+							<a href="javascript:void(0);" rel="nofollow"
+							   onclick="window.open('/veranstaltungen/eventsnachjahr/2026/-.html?print=1&amp;pop=1&amp;tmpl=component', 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=600,height=600,directories=no,location=no');"
+							   title="Drucken">
+								<span class="icon-print"> </span>
+							</a>
+						</li> 			</ul>
+				</div>
+	<div class="contentpaneopen  jeventpage  jevbootstrap" id="jevents_body">
+	<div  class="col-xs-12"><h2 class="monat">Januar 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">25</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">26</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Mittagstisch für alle</h2><p><strong>Wann:</strong>  12:00 – 13:30 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p><p>Kommen Sie vorbei und genießen Sie eine warme Suppe. Wir laden alle Nachbar*innen zum Mittagstisch ein.<br />
+<strong>Montag von 12 - 13.30 Uhr im Saal (OG)</strong><br />
+<strong>Kostenbeitrag:</strong> 1 €, Ermäßigung möglich<br />
+Anmeldung: nicht erforderlich</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">27</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/familienzentrum.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Familienfrühstück</h2><p><strong>Wann:</strong>  10:00 – 11:59 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/231.html"  title="Familienzentrum Weißensee">Familienzentrum Weißensee</a></p>
+<p></p>
+<p><p><strong>Zielgruppe: </strong>alle Menschen mit Baby und Kleinkindern, alle Familienkonstellationen willkommen</p>
+
+<p><strong>Kostenbeitrag:</strong> Wir bitten, wem es möglich ist, um eine Spende von 4 Euro.</p>
+
+<p>Beim gemeinsamen Frühstück in gemütlicher Atmosphäre könnt ihr euch mit anderen Familien vernetzen und zu verschiedenen Themen austauschen.</p>
+
+<p>Eine Pädagogin aus dem Familienzentrum begleitet das Angebot und steht euch für Fragen und Anregungen zur Verfügung. In regelmäßigen Abständen gibt es die Möglichkeit mit weiteren Fachpersonen beim Frühstück zu Familienthemen in den Austausch zu gehen.</p>
+
+<p>Wir freuen uns auf euch!</p>
+
+<p><strong>Anmeldung:</strong> Keine</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">27</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>KiezCafé im Stadtteilzentrum </h2><p><strong>Wann:</strong>  16:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p><p>Das Café ist ein offener Treffpunkt im Kiez. Hier lernen sich Nachbar:innen kennen und Familien und Freunde treffen einander. Es gibt ein kleines Bastelangebot für Groß und Klein auf Spendenbasis und Spiele zum Ausleihen.</p>
+
+<p>Dienstag, 16–18 Uhr im Saal</p>
+
+<p>Anmeldung: nicht erforderlich</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">28</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Kinderklatsch</h2><p><strong>Wann:</strong>  15:30 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p>Alte Apotheke</p>
+<p><div>Die Idee: Eltern und Kinder kommen bei Kaffee und Snacks in der kalten Jahreszeit zusammen. Die Kinder können toben und wir kommen ins Gespräch. Bringt gerne Snacks mit.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<p><img src="/images/250917_Kinderklatsch_20250904_222149_0000.png" alt="250917 Kinderklatsch 20250904 222149 0000" width="407" height="577" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">29</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Fair.Café Weißensee</h2><p><strong>Wann:</strong>  14:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Du wünschst Dir in Deinem Kiez mehr Gemeinschaft und Nachhaltigkeit?&nbsp;Im Fair.Café Weißensee kannst du jede Woche Donnerstag 14 - 17 Uhr Lebensmittel retten und mit Menschen zusammenkommen. • Gratis Kaffee • Vernetzung und Austausch • Wechselnde Kulturangebote oder Workshops.<br />
+Du möchtest Früchte und Gemüse aus dem Garten kostenlos mit der Nachbarschaft teilen und tauschen, dann helfen wir beim Transport. Du willst deine Interessen oder Fähigkeiten an andere weitergeben, dann biete gerne einen eigenen Workshop an. Du bist bei Foodsharing organisiert, dann nutze das Fair.Cafè gern als Abgabeort. Oder komm' einfach vorbei und bring Deine Ideen mit. Die Initiative Faires.Pankow und das Stadtteilzentrum Weißensee freuen sich auf Dich!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Jan.</div>
+<div class="day">30</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Quizabend im Stadtteilzentrum</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Sie sind voller nützlicher oder auch weniger nützlicher Informationen und haben Spaß daran? Wir auch! Kommen Sie und genießen das Rennen um das passende Wissen. Teams von 3 bis 6 Personen können sich im freundlichen Wettbewerb mit anderen messen. Sie können als ganzes Team oder als Einzelperson teilnehmen und sich mit anderen zusammenschließen. Der Spaß und die Schnelligkeit zählen!<br />
+Anmeldung:&nbsp;<a href="mailto:Honeck21@gmail.com">Honeck21@gmail.com</a><br />
+Kosten:&nbsp;3 € /Termin</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">Februar 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">08</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Strategiespieltag "Lands of Glory"</h2><p><strong>Wann:</strong>  10:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div>Wenn mittelalterliche Strategie, Handel und Aufbau dein Herz höherschlagen lassen dann ist dieses Brettspielerlebnis genau dein Ding.</div>
+
+In Lands of Glory entscheiden Strategie, Verhandlungsgeschick und eine Prise Glück, ob aus euch ein*e legendärer*e Herrscher*in wird. Gründet ein Königreich, schmiedet Bündnisse, handelt klug trotz Rivalitäten. Seid Ihr bereit?
+<div>Dann schaut vorbei und sichert euch euren Platz für das nächste Herrschaftsringen: <a href="https://www.landsofglory.de">www.landsofglory.de</a></div>
+
+<p><img src="/images/Flyer_black_Info_2026_Lands_of_Glory_2.png" alt="Flyer black Info 2026 Lands of Glory 2" width="282" height="406" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">08</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>MachArt Berlin - Markt für Design, DIY & Dialog</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Was dich erwartet: Hochwertige Aussteller:innen, Workshops &amp; kreative Formate, Keine Massenware, sondern Geschichten und eine offene, inspirierende Atmonspäre.<br />
+<strong>Veranstalter:&nbsp;</strong>MachArt Berlin<br />
+<strong>Anmeldung/Information:&nbsp;</strong><a href="mailto:info@machartberlin.de">info@machartberlin.de</a>,&nbsp;<a href="https://www.machartberlin.de" target="_blank" rel="noopener">www.machartberlin.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">09</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Kräuterwerkstatt im Stadtteilzentrum</h2><p><strong>Wann:</strong>  16:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Die Kräuterpädagogin Claudia Scholz gibt in kleiner Runde ihr Kräuterwissen weiter, z. B. beim Kräuterspaziergang oder bei der Herstellung von Kräuterwasser, Kräutersalz und Reinigungsmittel. <br />
+<strong>*** Dieses Mal lädt sie zu einem&nbsp;Kiezspaziergang mit Baumbestimmung im Winter. Treffpunkt ist bereits 14.30 Uhr. ***</strong><br />
+2. Montag des Monats (außer Juni, Juli und August)<br />
+<strong>Kursleiterin:</strong>&nbsp;Claudia Scholz, Kräuterpädagogin<br />
+<strong>Kosten:</strong>&nbsp;15 € einschließlich Material und Snack<br />
+<strong>Anmeldung/Kontakt:</strong>&nbsp;<a href="mailto:cla.h.scholz@gmail.com">cla.h.scholz@gmail.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">10</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Kiez als Bühne - Linoldruckworkshop</h2><p><strong>Wann:</strong>  13:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Noch bis Mai 2026 verwandeln wir Spielplätze, Straßen, Parks und Plätze in zehn Berliner Stadtteilen in lebendige Bühnen voller Vielfalt.<br />
+Heute findet im Stadtteilzentrum Weißensee ein Linoldruckworkshop statt. Wir wollen Geschmack in Bilder übersetzen.&nbsp;<br />
+<strong>Anmeldung:</strong>&nbsp;<a href="mailto:info@frei-zeit-haus.de">info@frei-zeit-haus.de</a><br />
+<strong>Mehr Informationen unter</strong>&nbsp;<a href="https://werkstadt.berlin">https://werkstadt.berlin</a><br />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">10</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Lesung über das Leben von Kurt Scheidler</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p><a href="https://www.rohnstock-biografien.de/" target="_blank" rel="noopener">Rohnstock Biografien</a> und FreiZeitHaus e.V. laden ein zur Buchlesung über das Leben von Kurt Scheidler, ein Arzt mit sozialer Verantwortung. Kurt Scheidler war einer der bedeutendsten Berliner Ärzte der Nachkriegszeit und wichtiger Impulsgeber für die Entwicklung des DDR-Gesundheitswesens.<br />
+<br />
+Kontakt:&nbsp;<a href="mailto:Info@frei-zeit-haus.de">Info@frei-zeit-haus.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">11</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Modenschau</h2><p><strong>Wann:</strong>  14:30 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Der Textilhandel Uhlig bietet im Stadtteilzentrum eine Modenschau an. Sie kommen mit ihrer aktuellen Sommerkollektion und zeigen ausgewählte Stücke.<br />
+Es gibt Kaffee und Kuchen.<br />
+<strong>Anmeldung:&nbsp;</strong>keine<br />
+<strong>Eintritt:&nbsp;</strong>4 Euro (3 Euro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">15</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Offener Spielenachmittag</h2><p><strong>Wann:</strong>  14:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div><img src="/images/Spielenachmittag_1.jpg" alt="Spielenachmittag 1" width="210" height="297" style="float: right;" /></div>
+
+<p>Lust auf eine Spielrunde? Egal ob Klassiker wie Schach und Uno, moderne Highlights wie Cascadia oder deine ganz eigenen Geheimtipps – komm vorbei und zock mit! Bring dein Lieblingsspiel mit oder lass dich von den Favoriten der anderen begeistern. Spenden sind willkommen!&nbsp;</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">18</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Kiezgespräch mit Senatorin Cansel Kiziltepe</h2><p><strong>Wann:</strong>  17:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Kiezgespräch mit Senatorin Cansel Kiziltepe (Berliner Senatorin für Arbeit, Soziales, Gleichstellung, Integration, Vielfalt und Antidiskriminierung im Senat)<br />
+Anmeldung:&nbsp;<a href="mailto:info@frei.zeit.haus">info@frei.zeit.haus</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">21</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Strategiespieltag "Lands of Glory"</h2><p><strong>Wann:</strong>  10:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div>Wenn mittelalterliche Strategie, Handel und Aufbau dein Herz höherschlagen lassen dann ist dieses Brettspielerlebnis genau dein Ding.</div>
+
+In Lands of Glory entscheiden Strategie, Verhandlungsgeschick und eine Prise Glück, ob aus euch ein*e legendärer*e Herrscher*in wird. Gründet ein Königreich, schmiedet Bündnisse, handelt klug trotz Rivalitäten. Seid Ihr bereit?
+<div>Dann schaut vorbei und sichert euch euren Platz für das nächste Herrschaftsringen: <a href="https://www.landsofglory.de">www.landsofglory.de</a></div>
+
+<p><img src="/images/Flyer_black_Info_2026_Lands_of_Glory_2.png" alt="Flyer black Info 2026 Lands of Glory 2" width="282" height="406" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">22</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Feb.</div>
+<div class="day">25</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Arbeitskreis Inklusion</h2><p><strong>Wann:</strong>  16:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Im Arbeitskreis Inklusion treffen sich Menschen aus dem Stadtteil. Alle können mitmachen: Menschen mit und ohne Behinderungen, Angehörige und Nachbar*innen. Wir sind gemeinsam aktiv und planen viele Aktionen im Stadtteilzentrum.<br />
+Termine:&nbsp;25.02., 29.04., 22.06.(!), 26.08., 28.10. von 16–18 Uhr im Gartensaal (OG)<br />
+Information:&nbsp;<a href="mailto:carolin.janssen@frei-zeit-haus.de">carolin.janssen@frei-zeit-haus.de</a><br />
+Anmeldung:&nbsp;nicht erforderlich</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">März 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">01</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Queer Bake & Cake</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Wir kommen sonntags in entspannter Atmosphäre zum crazy Backen und Kaffee-Klatschen zusammen. Dabei stehen Spaß und Austausch für die LGBTQ+ Community im Vordergrund.<br />
+<strong>Folgende Termine:</strong>&nbsp;12.7.26 (Sommerfest im Garten), 1.11. (Halloween) und 6.12.26 (Nikolausbacken)<br />
+<strong>Leitung:</strong>&nbsp;Mike Falk, Emanzipatorische Selbsthilfe e.V.<br />
+<strong>Anmeldung:</strong>&nbsp;<a href="mailto:queerbakeandcake@gmx.de">queerbakeandcake@gmx.de</a> oder über Instagram @queerbakeandcake.de&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">01</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Offener Spielenachmittag</h2><p><strong>Wann:</strong>  14:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div><img src="/images/Spielenachmittag_1.jpg" alt="Spielenachmittag 1" width="210" height="297" style="float: right;" /></div>
+
+<p>Lust auf eine Spielrunde? Egal ob Klassiker wie Schach und Uno, moderne Highlights wie Cascadia oder deine ganz eigenen Geheimtipps – komm vorbei und zock mit! Bring dein Lieblingsspiel mit oder lass dich von den Favoriten der anderen begeistern. Spenden sind willkommen!</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">04</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Konzert mit Stephan Weiß</h2><p><strong>Wann:</strong>  19:00 – 21:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Stephan Weiß spielt andere Berliner Lieder: Begleitet von professionellen Perkussionisten: Songs zu Trommel, Westerngitarre und Bluesmundharmonika.<br />
+<strong>Eintritt:</strong>&nbsp;10 Euro, ermäßigt 6 Euro</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">09</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Kräuterwerkstatt im Stadtteilzentrum</h2><p><strong>Wann:</strong>  16:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Die Kräuterpädagogin Claudia Scholz gibt in kleiner Runde ihr Kräuterwissen weiter, z. B. beim Kräuterspaziergang oder bei der Herstellung von Kräuterwasser, Kräutersalz und Reinigungsmittel.<br />
+<strong>*** Dieses Mal werden aus&nbsp;Pappelknospen&nbsp;aromatisches Kräutersalz, Teezubereitung und pflegende Salbe&nbsp;hergestellt. ***</strong><br />
+<strong>Kursleiterin:</strong>&nbsp;Claudia Scholz, Kräuterpädagogin<br />
+<strong>Kosten:</strong>&nbsp;15 € einschließlich Material und Snack<br />
+<strong>Anmeldung/Kontakt:</strong>&nbsp;<a href="mailto:cla.h.scholz@gmail.com">cla.h.scholz@gmail.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">20</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Quizabend im Stadtteilzentrum</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Sie sind voller nützlicher oder auch weniger nützlicher Informationen und haben Spaß daran? Wir auch! Kommen Sie und genießen das Rennen um das passende Wissen. Teams von 3 bis 6 Personen können sich im freundlichen Wettbewerb mit anderen messen. Sie können als ganzes Team oder als Einzelperson teilnehmen und sich mit anderen zusammenschließen. Der Spaß und die Schnelligkeit zählen!<br />
+Anmeldung:&nbsp;<a href="mailto:Honeck21@gmail.com">Honeck21@gmail.com</a><br />
+Kosten:&nbsp;3 € /Termin</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">22</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Strategiespieltag "Lands of Glory"</h2><p><strong>Wann:</strong>  10:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div>Wenn mittelalterliche Strategie, Handel und Aufbau dein Herz höherschlagen lassen dann ist dieses Brettspielerlebnis genau dein Ding.</div>
+
+In Lands of Glory entscheiden Strategie, Verhandlungsgeschick und eine Prise Glück, ob aus euch ein*e legendärer*e Herrscher*in wird. Gründet ein Königreich, schmiedet Bündnisse, handelt klug trotz Rivalitäten. Seid Ihr bereit?
+<div>Dann schaut vorbei und sichert euch euren Platz für das nächste Herrschaftsringen: <a href="https://www.landsofglory.de">www.landsofglory.de</a></div>
+
+<p><img src="/images/Flyer_black_Info_2026_Lands_of_Glory_2.png" alt="Flyer black Info 2026 Lands of Glory 2" width="282" height="406" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">März</div>
+<div class="day">29</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">April 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Apr.</div>
+<div class="day">13</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Kräuterwerkstatt im Stadtteilzentrum</h2><p><strong>Wann:</strong>  16:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Die Kräuterpädagogin Claudia Scholz gibt in kleiner Runde ihr Kräuterwissen weiter, z. B. beim Kräuterspaziergang oder bei der Herstellung von Kräuterwasser, Kräutersalz und Reinigungsmittel.<br />
+<strong>*** Dieses Mal wird Bärlauch bei der Zubereitung mit Salz und Senfsaat konserviert. ***&nbsp;</strong><br />
+<strong>Kursleiterin:&nbsp;</strong>Claudia Scholz, Kräuterpädagogin<br />
+<strong>Kosten:</strong>&nbsp;15 € einschließlich Material und Snack<br />
+<strong>Anmeldung/Kontakt:</strong>&nbsp;<a href="mailto:cla.h.scholz@gmail.com">cla.h.scholz@gmail.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Apr.</div>
+<div class="day">19</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Sozialer Trödelmarkt</h2><p><strong>Wann:</strong>  15:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Besuchen Sie unseren Trödelmarkt und unterstützen Sie Menschen mit Fluchtgeschichte. Bei schönem Wetter findet der Markt im Garten statt, bei Regen im Haus.<br />
+<br />
+<strong>Kosten:</strong>&nbsp;5 € zzgl. 5 € aus dem Verkaufserlös<br />
+<strong>Veranstalter:&nbsp;</strong>Bildungsverein am Kreuzpfuhl e.V.<br />
+<strong>Anmeldung/Infos:</strong>&nbsp;<a href="mailto:info@bv-kreuzpfuhl.de">info@bv-kreuzpfuhl.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Apr.</div>
+<div class="day">19</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Sozialer Trödelmarkt</h2><p><strong>Wann:</strong>  15:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Besuchen Sie unseren Trödelmarkt und unterstützen Sie Menschen mit Fluchtgeschichte. Bei schönem Wetter findet der Markt im Garten statt, bei Regen im Haus.<br />
+<br />
+<strong>Kosten:</strong>&nbsp;5 € zzgl. 5 € aus dem Verkaufserlös<br />
+<strong>Veranstalter:&nbsp;</strong>Bildungsverein am Kreuzpfuhl e.V.<br />
+<strong>Anmeldung/Infos:</strong>&nbsp;<a href="mailto:info@bv-kreuzpfuhl.de">info@bv-kreuzpfuhl.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Apr.</div>
+<div class="day">26</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">Mai 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Mai</div>
+<div class="day">03</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>MachArt Berlin - Markt für Design, DIY & Dialog</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Was dich erwartet: Hochwertige Aussteller:innen, Workshops &amp; kreative Formate, Keine Massenware, sondern Geschichten und eine offene, inspirierende Atmonspäre.<br />
+<strong>Veranstalter:&nbsp;</strong>MachArt Berlin<br />
+<strong>Anmeldung/Information:&nbsp;</strong><a href="mailto:info@machartberlin.de">info@machartberlin.de</a>,&nbsp;<a href="https://www.machartberlin.de" target="_blank" rel="noopener">www.machartberlin.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Mai</div>
+<div class="day">22</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Quizabend im Stadtteilzentrum</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Sie sind voller nützlicher oder auch weniger nützlicher Informationen und haben Spaß daran? Wir auch! Kommen Sie und genießen das Rennen um das passende Wissen. Teams von 3 bis 6 Personen können sich im freundlichen Wettbewerb mit anderen messen. Sie können als ganzes Team oder als Einzelperson teilnehmen und sich mit anderen zusammenschließen. Der Spaß und die Schnelligkeit zählen!<br />
+Anmeldung:&nbsp;<a href="mailto:Honeck21@gmail.com">Honeck21@gmail.com</a><br />
+Kosten:&nbsp;3 € /Termin</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">Juni 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Juni</div>
+<div class="day">14</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">Juli 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Juli</div>
+<div class="day">12</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Queer Bake & Cake</h2><p><strong>Wann:</strong>  12:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Wir kommen sonntags in entspannter Atmosphäre zum crazy Backen und Kaffee-Klatschen zusammen. Dabei stehen Spaß und Austausch für die LGBTQ+ Community im Vordergrund.<br />
+<strong>Nächster Termin:</strong>&nbsp;1.11. (Halloween) und&nbsp; 6.12.26 (Nikolausbacken) um 12 - 17 Uhr<br />
+<strong>Leitung:</strong>&nbsp;Mike Falk, Emanzipatorische Selbsthilfe e.V.<br />
+<strong>Anmeldung:&nbsp;</strong><a href="mailto:queerbakeandcake@gmx.de">queerbakeandcake@gmx.de</a> oder über Instagram @queerbakeandcake.de&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Juli</div>
+<div class="day">31</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Quizabend im Stadtteilzentrum</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Sie sind voller nützlicher oder auch weniger nützlicher Informationen und haben Spaß daran? Wir auch! Kommen Sie und genießen das Rennen um das passende Wissen. Teams von 3 bis 6 Personen können sich im freundlichen Wettbewerb mit anderen messen. Sie können als ganzes Team oder als Einzelperson teilnehmen und sich mit anderen zusammenschließen. Der Spaß und die Schnelligkeit zählen!<br />
+Anmeldung:&nbsp;<a href="mailto:Honeck21@gmail.com">Honeck21@gmail.com</a><br />
+Kosten:&nbsp;3 € /Termin</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">August 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Aug.</div>
+<div class="day">19</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Konzert mit Stephan Weiß</h2><p><strong>Wann:</strong>  19:00 – 21:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Stephan Weiß spielt andere Berliner Lieder: Begleitet von professionellen Perkussionisten: Songs zu Trommel, Westerngitarre und Bluesmundharmonika.<br />
+Wo:&nbsp;Im Garten&nbsp;<br />
+<strong>Eintritt:</strong>&nbsp;10 Euro, ermäßigt 6 Euro</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Aug.</div>
+<div class="day">30</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>MachArt Berlin - Markt für Design, DIY & Dialog</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Was dich erwartet: Hochwertige Aussteller:innen, Workshops &amp; kreative Formate, Keine Massenware, sondern Geschichten und eine offene, inspirierende Atmonspäre.<br />
+<strong>Veranstalter:&nbsp;</strong>MachArt Berlin<br />
+<strong>Anmeldung/Information:&nbsp;</strong><a href="mailto:info@machartberlin.de">info@machartberlin.de</a>,&nbsp;<a href="https://www.machartberlin.de" target="_blank" rel="noopener">www.machartberlin.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">September 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Sep.</div>
+<div class="day">06</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Gartenkonzert im Sonnenschein</h2><p><strong>Wann:</strong>  14:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Der gemischte Chor Liedgut e. V. gibt ein Gartenkonzert im Stadtteilzentrum Weißensee. Alle Nachbarn und Nachbarinnen sind eingeladen. Kaffee und Kuchen gibt es auch.&nbsp;<br />
+<a href="https://www.chor-liedgut-berlin.de" target="_blank" rel="noopener">www.chor-liedgut-berlin.de</a><br />
+<strong>Kosten:</strong>&nbsp;Eintritt frei - Spenden erwünscht.&nbsp;<br />
+<strong>Anmeldung:&nbsp;</strong>nicht erforderlich - einfach kommen.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Sep.</div>
+<div class="day">18</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Quizabend im Stadtteilzentrum</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Sie sind voller nützlicher oder auch weniger nützlicher Informationen und haben Spaß daran? Wir auch! Kommen Sie und genießen das Rennen um das passende Wissen. Teams von 3 bis 6 Personen können sich im freundlichen Wettbewerb mit anderen messen. Sie können als ganzes Team oder als Einzelperson teilnehmen und sich mit anderen zusammenschließen. Der Spaß und die Schnelligkeit zählen!<br />
+Anmeldung:&nbsp;<a href="mailto:Honeck21@gmail.com">Honeck21@gmail.com</a><br />
+Kosten:&nbsp;3 € /Termin</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Sep.</div>
+<div class="day">26</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Mitgliederversammlung 2026</h2><p><strong>Wann:</strong>  10:00 – 13:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Der FreiZeitHaus e. V. lädt alle Mitglieder zur Mitgliederversammlung ins Stadtteilzentrum Weißensee.&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Sep.</div>
+<div class="day">27</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">Oktober 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Okt.</div>
+<div class="day">04</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Herbstfest im Stadtteilzentrum</h2><p><strong>Wann:</strong>  15:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Wir laden alle Nachbar*innen zum Herbstfest ein.&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Okt.</div>
+<div class="day">07</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Konzert mit Stephan Weiß</h2><p><strong>Wann:</strong>  19:00 – 21:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Stephan Weiß spielt andere Berliner Lieder: Begleitet von professionellen Perkussionisten: Songs zu Trommel, Westerngitarre und Bluesmundharmonika.<br />
+<strong>Wo:</strong>&nbsp;Im Garten&nbsp;<br />
+<strong>Eintritt:&nbsp;</strong>10 Euro, ermäßigt 6 Euro</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Okt.</div>
+<div class="day">10</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Strategiespieltag "Lands of Glory"</h2><p><strong>Wann:</strong>  10:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div>Wenn mittelalterliche Strategie, Handel und Aufbau dein Herz höherschlagen lassen dann ist dieses Brettspielerlebnis genau dein Ding.</div>
+
+In Lands of Glory entscheiden Strategie, Verhandlungsgeschick und eine Prise Glück, ob aus euch ein*e legendärer*e Herrscher*in wird. Gründet ein Königreich, schmiedet Bündnisse, handelt klug trotz Rivalitäten. Seid Ihr bereit?
+<div>Dann schaut vorbei und sichert euch euren Platz für das nächste Herrschaftsringen: <a href="https://www.landsofglory.de">www.landsofglory.de</a></div>
+
+<p><img src="/images/Flyer_black_Info_2026_Lands_of_Glory_2.png" alt="Flyer black Info 2026 Lands of Glory 2" width="282" height="406" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Okt.</div>
+<div class="day">11</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Sozialer Trödelmarkt</h2><p><strong>Wann:</strong>  15:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Besuchen Sie unseren Trödelmarkt und unterstützen Sie Menschen mit Fluchtgeschichte. Bei schönem Wetter findet der Markt im Garten statt, bei Regen im Haus.<br />
+<br />
+<strong>Kosten:</strong>&nbsp;5 € zzgl. 5 € aus dem Verkaufserlös<br />
+<strong>Veranstalter:&nbsp;</strong>Bildungsverein am Kreuzpfuhl e.V.<br />
+<strong>Anmeldung/Infos:</strong>&nbsp;<a href="mailto:info@bv-kreuzpfuhl.de">info@bv-kreuzpfuhl.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Okt.</div>
+<div class="day">25</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Tanztee für alle</h2><p><strong>Wann:</strong>  16:00 – 19:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Tanz und Unterhaltung bei Kaffee, Kuchen und Live-Musik.<br />
+<strong>Ansprechpartnerin:</strong>&nbsp;Petra Mollnow<br />
+<strong>Kostenbeteiligung:&nbsp;</strong>7€ / 6€ zzgl. Kaffee und Kuchen<br />
+<strong>Anmeldung:</strong>&nbsp;030.92 79 94 63 (Büro)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">November 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Nov.</div>
+<div class="day">01</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2> Queer Bake & Cake</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Wir kommen sonntags in entspannter Atmosphäre zum crazy Backen und Kaffee-Klatschen zusammen. Dabei stehen Spaß und Austausch für die LGBTQ+ Community im Vordergrund.<br />
+<strong>Nächster Termin:&nbsp;</strong>6.12.26 (Nikolausbacken) um 12 - 17 Uhr<br />
+<strong>Leitung:&nbsp;</strong>Mike Falk, Emanzipatorische Selbsthilfe e.V.<br />
+<strong>Anmeldung:</strong>&nbsp;<a href="mailto:queerbakeandcake@gmx.de">queerbakeandcake@gmx.de</a> oder über Instagram @queerbakeandcake.de&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Nov.</div>
+<div class="day">08</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>MachArt Berlin - Markt für Design, DIY & Dialog</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Was dich erwartet: Hochwertige Aussteller:innen, Workshops &amp; kreative Formate, Keine Massenware, sondern Geschichten und eine offene, inspirierende Atmonspäre.<br />
+<strong>Veranstalter:&nbsp;</strong>MachArt Berlin<br />
+<strong>Anmeldung/Information:&nbsp;</strong><a href="mailto:info@machartberlin.de">info@machartberlin.de</a>,&nbsp;<a href="https://www.machartberlin.de" target="_blank" rel="noopener">www.machartberlin.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Nov.</div>
+<div class="day">14</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Strategiespieltag "Lands of Glory"</h2><p><strong>Wann:</strong>  10:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div>Wenn mittelalterliche Strategie, Handel und Aufbau dein Herz höherschlagen lassen dann ist dieses Brettspielerlebnis genau dein Ding.</div>
+
+In Lands of Glory entscheiden Strategie, Verhandlungsgeschick und eine Prise Glück, ob aus euch ein*e legendärer*e Herrscher*in wird. Gründet ein Königreich, schmiedet Bündnisse, handelt klug trotz Rivalitäten. Seid Ihr bereit?
+<div>Dann schaut vorbei und sichert euch euren Platz für das nächste Herrschaftsringen: <a href="https://www.landsofglory.de">www.landsofglory.de</a></div>
+
+<p><img src="/images/Flyer_black_Info_2026_Lands_of_Glory_2.png" alt="Flyer black Info 2026 Lands of Glory 2" width="282" height="406" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Nov.</div>
+<div class="day">20</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Quizabend im Stadtteilzentrum</h2><p><strong>Wann:</strong>  18:00 – 20:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Sie sind voller nützlicher oder auch weniger nützlicher Informationen und haben Spaß daran? Wir auch! Kommen Sie und genießen das Rennen um das passende Wissen. Teams von 3 bis 6 Personen können sich im freundlichen Wettbewerb mit anderen messen. Sie können als ganzes Team oder als Einzelperson teilnehmen und sich mit anderen zusammenschließen. Der Spaß und die Schnelligkeit zählen!<br />
+Anmeldung:&nbsp;<a href="mailto:Honeck21@gmail.com">Honeck21@gmail.com</a><br />
+Kosten:&nbsp;3 € /Termin</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div  class="col-xs-12"><h2 class="monat">Dezember 2026</h3></div><div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Dez.</div>
+<div class="day">06</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2> Queer Bake & Cake</h2><p><strong>Wann:</strong>  12:00 – 17:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Wir kommen sonntags in entspannter Atmosphäre zum crazy Backen und Kaffee-Klatschen zusammen. Dabei stehen Spaß und Austausch für die LGBTQ+ Community im Vordergrund.<br />
+<strong>Leitung:&nbsp;</strong>Mike Falk, Emanzipatorische Selbsthilfe e.V.<br />
+<strong>Anmeldung:&nbsp;</strong><a href="mailto:queerbakeandcake@gmx.de">queerbakeandcake@gmx.de</a> oder über Instagram @queerbakeandcake.de&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Dez.</div>
+<div class="day">12</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/alte_Apotheke.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Strategiespieltag "Lands of Glory"</h2><p><strong>Wann:</strong>  10:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/233.html"  title="Nachbarschaftshaus Alte Apotheke">Nachbarschaftshaus Alte Apotheke</a></p>
+<p></p>
+<p><div>Wenn mittelalterliche Strategie, Handel und Aufbau dein Herz höherschlagen lassen dann ist dieses Brettspielerlebnis genau dein Ding.</div>
+
+In Lands of Glory entscheiden Strategie, Verhandlungsgeschick und eine Prise Glück, ob aus euch ein*e legendärer*e Herrscher*in wird. Gründet ein Königreich, schmiedet Bündnisse, handelt klug trotz Rivalitäten. Seid Ihr bereit?
+<div>Dann schaut vorbei und sichert euch euren Platz für das nächste Herrschaftsringen: <a href="https://www.landsofglory.de">www.landsofglory.de</a></div>
+
+<p><img src="/images/Flyer_black_Info_2026_Lands_of_Glory_2.png" alt="Flyer black Info 2026 Lands of Glory 2" width="282" height="406" style="float: right;" /></p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Dez.</div>
+<div class="day">13</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Sozialer Trödelmarkt</h2><p><strong>Wann:</strong>  15:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Besuchen Sie unseren Trödelmarkt und unterstützen Sie Menschen mit Fluchtgeschichte. Bei schönem Wetter findet der Markt im Garten statt, bei Regen im Haus.<br />
+<br />
+<strong>Kosten:</strong>&nbsp;5 € zzgl. 5 € aus dem Verkaufserlös<br />
+<strong>Veranstalter:&nbsp;</strong>Bildungsverein am Kreuzpfuhl e.V.<br />
+<strong>Anmeldung/Infos:</strong>&nbsp;<a href="mailto:info@bv-kreuzpfuhl.de">info@bv-kreuzpfuhl.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 abstand-breite-null" style="margin-bottom: 24px;"><div class="col-xs-12 abstand-all-null schatten"><div class="neulandeventDate"><div class="month">Dez.</div>
+<div class="day">19</div>
+<div class="year">2026</div>
+</div>
+<div class="col-sm-4 col-xs-12 abstand-all-null"><img src = 'https://www.frei-zeit-haus.de/images/standort/Stadtteilzentrum_Weissensee.png' class='catimage'  alt='Kategorie-Bild' /></div>
+<div class="col-sm-8 col-xs-12 abstand-unten-null"><div class="text"><div class="headline"><h2>Weihnachtskonzert</h2><p><strong>Wann:</strong>  16:00 – 18:00 Uhr</p>
+<p><strong>Wo:</strong> <a class="ev_link_cat" href="/veranstaltungen/eventsnachjahr/2026/230.html"  title="Stadtteilzentrum Weißensee">Stadtteilzentrum Weißensee</a></p>
+<p></p>
+<p>Der Chor "Liedgut e. V." gibt ein Weihnachtskonzert im Stadtteilzentrum.<br />
+<strong>Eintritt:</strong> 10,00 € (Kinder 5,00 €).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+	</div>
+	</div> <!-- close #jevents //-->
+					</div>
+
+																			</div>
+
+
+			</div>
+
+		</div>
+	</div>
+</main>
+
+<style>
+
+.footer {
+	padding: 8px 0px 0px 0px;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+
+}
+.container-fluid.first {/*background-color: #00919f;*/}
+.first .inhalt
+{
+	color: black !important;
+}
+.first .inhalt strong {
+	font-size: 2rem;
+	font-weight: 300;
+	color: blacke !important;
+}
+.second {
+	height: 40px;
+	color: black !important;
+}
+</style>
+<p>&nbsp;</p>
+<footer class="footer">
+	<div class="container-fluid first">
+		<div class="container" style="background: url('/images/linie-oben.png') no-repeat center bottom;height:58px;">
+		</div>
+		<div class="container" >
+			<div class="row first-footer-row">
+				<div class="col-xs-12 abstand-hoehe-null ">
+					<div class="col-md-4 col-sm-6  col-xs-12 abstand-breite-null abstand-oben-null">
+													
+<div id="mod-custom286" class="mod-custom custom">
+    <p><strong>FreiZeitHaus e.V.<br />FreiZeitHaus gGmbH<br /></strong>Geschäftsstelle<br /> Gäblerstraße 4&nbsp;· 13086 Berlin</p></div>
+
+						
+					</div>
+					<div class="col-md-4 col-sm-6  col-xs-12 abstand-breite-null  abstand-oben-null ">
+													<ul class="mod-menu mod-list nav footermenu">
+<li class="nav-item item-530"><a href="/mitarbeit.html" >Mitarbeit</a></li><li class="nav-item item-230"><a href="/impressum.html" title="Impressum der Gemeinde Schwielowsee">Impressum</a></li><li class="nav-item item-311"><a href="/datenschutz.html" title="Datenschutzerklärung der Gemeinde Schwielowsee">Datenschutz</a></li><li class="nav-item item-363"><a href="/kontakte.html" title="Barrierefreiheit der Gemeinde Schwielowsee">Kontakte</a></li></ul>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</footer>
+
+<script type="text/javascript" src="/templates/screendriverFOUR/js/custom.js"></script>
+
+</body>
+</html>
