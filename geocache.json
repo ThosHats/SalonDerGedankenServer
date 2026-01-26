@@ -216,5 +216,47 @@
     },
     "H\u00f6rsaal, C1.05, room C1.05, building 6, floor 1, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null,
     "Kunsthalle am Hamburger Platz, room , building 0, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null,
-    "Aula, D1.02, room D1.02, building 4, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null
+    "Aula, D1.02, room D1.02, building 4, Wei\u00dfensee Kunsthochschule Berlin, B\u00fchringstra\u00dfe 20, 13086 Berlin": null,
+    "Sekretariat der Pflegedirektion (3. Etage)": null,
+    "Sekretariat der Pflegedirektion": null,
+    "Park-Klinik Wei\u00dfensee, Sch\u00f6nstra\u00dfe 80, 13086 Berlin, Casino im UG Teilnahme: Die Fortbildungsveranstaltung wird von der \u00c4rztekammer Berlin mit zwei Punkten zertifiziert.": null,
+    "Park-Klinik Wei\u00dfensee, Sch\u00f6nstra\u00dfe 80, 13086 Berlin, Casino im UG Teilnahme: Die Fortbildungsveranstaltung wird von der \u00c4rztekammer Berlin": null,
+    "Park-Klinik Wei\u00dfensee, Sch\u00f6nstra\u00dfe 80, 13086 Berlin Teilnahme: kostenlos. Wir bitten um Anmeldung.": null,
+    "Park-Klinik Wei\u00dfensee, Sch\u00f6nstra\u00dfe 80, 13086 Berlin": null,
+    "Park-Klinik Wei\u00dfensee, Sch\u00f6nstra\u00dfe 80, 13086 Berlin, Casino im UG": null,
+    "Stadtteilzentrum Wei\u00dfensee": null,
+    "Familienzentrum Wei\u00dfensee": {
+        "lat": 52.5482081,
+        "lon": 13.4526961
+    },
+    "Nachbarschaftshaus Alte Apotheke": {
+        "lat": 52.572021,
+        "lon": 13.4379135
+    },
+    "Schaubude Berlin": {
+        "lat": 52.540836,
+        "lon": 13.4389797
+    },
+    "Nachbarschaftstreff NaiMo": null,
+    "Herzbergstr.40-43, 10365 Berlin": {
+        "lat": 52.5262259,
+        "lon": 13.4934575
+    },
+    "Anderer Standort": null,
+    "Alt-Treptow 1, 12435 Berlin": {
+        "lat": 52.4858552,
+        "lon": 13.4763288
+    },
+    "Prenzlauer Allee 80, 10405 Berlin": {
+        "lat": 52.5430569,
+        "lon": 13.4281438
+    },
+    "Munsterdamm 90, 12169 Berlin": {
+        "lat": 52.4574054,
+        "lon": 13.3512862
+    },
+    "Helleum II": {
+        "lat": 52.540743,
+        "lon": 13.599088
+    }
 }

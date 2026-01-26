@@ -80,3 +80,61 @@ providers:
     address: "Bühringstraße 20, 13086 Berlin"
     latitude: 52.5577
     longitude: 13.4387
+
+  - id: park_klinik_weissensee
+    name: "Park-Klinik Weißensee"
+    enabled: true
+    module: park_klinik_weissensee_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Schönstraße 80, 13086 Berlin"
+    latitude: 52.5577
+    longitude: 13.4515
+
+  - id: frei_zeit_haus
+    name: "Frei-Zeit-Haus"
+    enabled: true
+    module: frei_zeit_haus_provider.py
+    update_interval: 24h
+    region: berlin
+    address: "Pistoriusstraße 23, 13086 Berlin"
+    latitude: 52.5542
+    longitude: 13.4503
+
+  - id: schaubude_berlin
+    name: Schaubude Berlin
+    enabled: true
+    module: schaubude_berlin_provider.py
+    update_interval: 24h
+    region: Berlin
+    address: Greifswalder Str. 81-84, 10405 Berlin
+    latitude: 52.5408
+    longitude: 13.4328
+
+  - id: kollage_kollectiv
+    name: Kollage Kollectiv
+    enabled: true
+    module: kollage_kollectiv_provider.py
+    update_interval: 24h
+    region: Berlin
+    address: Lilli-Henoch-Straße 21, 10405 Berlin
+    latitude: 52.5358
+    longitude: 13.4312
+
+  - id: zirkus_mond
+    name: Zirkus Mond
+    enabled: true
+    module: zirkus_mond_provider.py
+    update_interval: 24h
+    region: Berlin
+    address: Lilli-Henoch-Straße, 10405 Berlin
+    latitude: 52.5358
+    longitude: 13.4312
+
+  - id: planetarium_berlin
+    name: Stiftung Planetarium Berlin
+    enabled: true
+    module: planetarium_berlin_provider.py
+    update_interval: 24h
+    region: Berlin
+
