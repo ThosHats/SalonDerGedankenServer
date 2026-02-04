@@ -258,5 +258,126 @@
     "Helleum II": {
         "lat": 52.540743,
         "lon": 13.599088
+    },
+    "Graefestra\u00dfe 12, 10967 Berlin": {
+        "lat": 52.4935342,
+        "lon": 13.4179341
+    },
+    "Gustav- Adolf-Stra\u00dfe 2, 13086 Berlin": {
+        "lat": 52.5519035,
+        "lon": 13.4311632
+    },
+    "Vor dem Schlesischen Tor 2, 10997 Berlin": {
+        "lat": 52.4971286,
+        "lon": 13.4500071
+    },
+    "Adalbertstra\u00dfe 96, 10999 Berlin Kreuzberg.": {
+        "lat": 52.5001289,
+        "lon": 13.418065
+    },
+    "Rollbergstra\u00dfe 28A, 12053 Berlin Neuk\u00f6lln": {
+        "lat": 52.4791786,
+        "lon": 13.4322498
+    },
+    "Breitenbachplatz 1, 14195 Berlin": {
+        "lat": 52.4674572,
+        "lon": 13.3105446
+    },
+    "Wiesenstra\u00dfe 55, 13357 Berlin Wedding": {
+        "lat": 52.5454291,
+        "lon": 13.3747669
+    },
+    "Florastra\u00dfe 16, 13187 Berlin": {
+        "lat": 52.5654788,
+        "lon": 13.4013651
+    },
+    "Ben-Gurion-Stra\u00dfe 1, 10785 Berlin": {
+        "lat": 52.5098319,
+        "lon": 13.3708647
+    },
+    "Kaskelstra\u00dfe 55, 10317 Berlin (S-Bahnhof N\u00f6ldnerplatz)": {
+        "lat": 52.5038714,
+        "lon": 13.4836489
+    },
+    "Kaskelstra\u00dfe 55, 10317 Berlin": {
+        "lat": 52.5038714,
+        "lon": 13.4836489
+    },
+    "Skalitzer Stra\u00dfe 133\r, 10999 Berlin Kreuzberg": {
+        "lat": 52.4992652,
+        "lon": 13.4197934
+    },
+    "Rigaer Stra\u00dfe 9/10\r, 10247 Berlin Friedrichshain": {
+        "lat": 52.5177959,
+        "lon": 13.456325
+    },
+    "H\u00f6rsaalruine, Virchowweg 16, 10117 Berlin": null,
+    "Luisen105, Gierkeplatz, 10585 Berlin Charlottenburg": null,
+    "Luisen105, Gierkeplatz, 10585 Berlin": null,
+    "Perleberger Stra\u00dfe 36, 10559 Berlin": {
+        "lat": 52.5306775,
+        "lon": 13.3463814
+    },
+    "am Rosa-Luxemburg-Platz, Linienstra\u00dfe 227, 10178 Berlin": null,
+    "Am Wriezener Bahnhof, 10243 Berlin": {
+        "lat": 52.5114484,
+        "lon": 13.4407738
+    },
+    "Arnimplatz, Arnimplatz, Berlin-Prenzlauer Berg": null,
+    "Two Fellas Brewery, M\u00fchlenstra\u00dfe 30, Berlin-Pankow": null,
+    "Schreib auf Instagram @gjb_nord oder per Mail an nord@gj-berlin.de, ": null,
+    "Schreib auf Instagram @gjb_nord oder per Mail an nord@gj-berlin.de,": null,
+    "Kreisgesch\u00e4ftsstelle (gro\u00dfer Raum), Pappelallee 84, Berlin-Prenzlauer Berg": null,
+    "Kreisgesch\u00e4ftsstelle, Pappelallee 84, Berlin-Prenzlauer Berg": null,
+    "Kreisgesch\u00e4ftsstelle (kleiner Raum), Pappelallee 84, Berlin-Prenzlauer Berg": null,
+    "Der Eiserne Gustav, Hauptstra\u00dfe 59a, Berlin-Franz\u00f6sisch Buchholz": null,
+    "B\u00fcro Bezirksstadtrat Stadtentwicklung und B\u00fcrgerdienste, Storkower Stra\u00dfe 97, Berlin-Prenzlauer Berg": null,
+    "Panda Platforma, Knaackstra\u00dfe 97, Berlin-Prenzlauer Berg": null,
+    "Kiezb\u00fcro B5 (kleiner Raum), Berliner Stra\u00dfe 5, Berlin-Pankow": null,
+    "Kiezb\u00fcro B5, Berliner Stra\u00dfe 5, Berlin-Pankow": null,
+    "Vor dem Cafe Eckstern, Sodtkestra\u00dfe 20, Berlin": null,
+    "Start an der Grellstra\u00dfe, Grellstra\u00dfe 14, Berlin": null,
+    "Fraktion B\u00fcndnis90/Die Gr\u00fcnen - Raum 202/203 (kleiner Besprechungsraum), Fr\u00f6belstra\u00dfe 17, Berlin": null,
+    "Fraktion B\u00fcndnis90/Die Gr\u00fcnen - Raum 202/203, Fr\u00f6belstra\u00dfe 17, Berlin": null,
+    "Start am Pistoriusplatz, Am Pistoriusplatz, Berlin": null,
+    "Kulturbrauerei, Sch\u00f6nhauser Allee 36, Berlin-Prenzlauer Berg": null,
+    "Start vor Denns BioMarkt, Prenzlauer Promenade 192, Berlin": null,
+    "Greifenhagener Str. 32, 10437 Berlin": {
+        "lat": 52.5523137,
+        "lon": 13.4194439
+    },
+    "B\u00fchnenRausch": {
+        "lat": 52.5514416,
+        "lon": 13.4183206
+    },
+    "Freilichtb\u00fchne Wei\u00dfensee (Konzert Gro\u00dfe B\u00fchne)": {
+        "lat": 52.5561503,
+        "lon": 13.4632646
+    },
+    "Freilichtb\u00fchne Wei\u00dfensee": {
+        "lat": 52.5561503,
+        "lon": 13.4632646
+    },
+    "Freilichtb\u00fchne Wei\u00dfensee (Kinder Konzert Gro\u00dfe B\u00fchne)": {
+        "lat": 52.5561503,
+        "lon": 13.4632646
+    },
+    "Velodrom": {
+        "lat": 52.5307438,
+        "lon": 13.451106
+    },
+    "ausland": {
+        "lat": 52.5448387,
+        "lon": 13.4194785
+    },
+    "Party in Pankow": null,
+    "Club23": null,
+    "Speiche": {
+        "lat": 50.8124343,
+        "lon": 8.5038202
+    },
+    "Kunstfabrik Schlot": {
+        "lat": 52.5302814,
+        "lon": 13.385162
     }
 }

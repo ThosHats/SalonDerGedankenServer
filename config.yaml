@@ -131,6 +131,85 @@ providers:
     latitude: 52.5358
     longitude: 13.4312
 
+  - id: gruene_pankow
+    name: "Grüne Pankow"
+    enabled: true
+    module: gruene_pankow_provider.py
+    update_interval: 12h
+    region: berlin
+    latitude: 52.567
+    longitude: 13.4122
+
+  - id: kino_krokodil
+    name: "Kino Krokodil"
+    enabled: true
+    module: kino_krokodil_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Greifenhagener Str. 32, 10437 Berlin"
+    latitude: 52.5497
+    longitude: 13.4182
+
+  - id: buehnenrausch
+    name: "BühnenRausch"
+    enabled: true
+    module: buehnenrausch_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Erich-Weinert-Str. 27, 10439 Berlin"
+    latitude: 52.5501
+    longitude: 13.4140
+
+  - id: freilichtbuehne_weissensee
+    name: "Freilichtbühne Weißensee"
+    enabled: true
+    module: freilichtbuehne_weissensee_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Große Seestraße 10, 13086 Berlin"
+    latitude: 52.5540
+    longitude: 13.4630
+
+  - id: velodrom
+    name: "Velodrom"
+    enabled: true
+    module: velodrom_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Paul-Heyse-Straße 26, 10407 Berlin"
+    latitude: 52.5302
+    longitude: 13.4504
+
+  - id: ausland
+    name: "ausland"
+    enabled: true
+    module: ausland_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Lychener Str. 60, 10437 Berlin"
+    latitude: 52.5418
+    longitude: 13.4216
+
+  - id: party_in_pankow
+    name: "Party in Pankow"
+    enabled: true
+    module: party_in_pankow_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Raumerstraße 39, 10437 Berlin"
+    latitude: 52.5445
+    longitude: 13.4212
+
+  - id: kunstfabrik_schlot
+    name: "Kunstfabrik Schlot"
+    enabled: true
+    module: kunstfabrik_schlot_provider.py
+    update_interval: 12h
+    region: berlin
+    address: "Invalidenstraße 117, 10115 Berlin"
+    latitude: 52.5308
+    longitude: 13.3833
+
   - id: planetarium_berlin
     name: Stiftung Planetarium Berlin
     enabled: true
