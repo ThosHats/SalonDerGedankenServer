@@ -50,9 +50,10 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
+          port: ${{ secrets.VPS_PORT || '22' }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "deploy/docker-compose.yml,deploy/up.sh"
-          target: "/opt/salondergedanken"
+          target: "/opt/SalonDerGedankenServer/deploy"
           strip_components: 1
 
       - name: Deploy on VPS via SSH
@@ -60,10 +61,11 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
+          port: ${{ secrets.VPS_PORT || '22' }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             set -e
-            cd /opt/salondergedanken
+            cd /opt/SalonDerGedankenServer/deploy
             chmod +x ./up.sh
             # Ensure we pull the latest version of the image
             docker compose pull
