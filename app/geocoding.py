@@ -2,6 +2,7 @@ import re
 import logging
 import json
 import os
+import time
 from threading import Lock
 from typing import Optional, Tuple
 from geopy.geocoders import Nominatim
@@ -10,11 +11,14 @@ from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 logger = logging.getLogger(__name__)
 
 class GeocodingService:
-    def __init__(self, cache_file: str = "geocache.json", user_agent: str = "salon_der_gedanken_service"):
-        self.cache_file = cache_file
+    def __init__(self, cache_file: Optional[str] = None, user_agent: str = "salon_der_gedanken_service"):
+        self.cache_file = cache_file or os.getenv("GEOCACHE_FILE", "geocache.json")
         self.user_agent = user_agent
         self.cache = self._load_cache()
         self.cache_lock = Lock()
+        self.request_lock = Lock()
+        self.min_request_interval = float(os.getenv("GEOCODING_MIN_REQUEST_INTERVAL", "1.0"))
+        self.last_request_time = 0.0
         self.geolocator = Nominatim(user_agent=self.user_agent)
 
     def _load_cache(self) -> dict:
@@ -46,6 +50,17 @@ class GeocodingService:
         
         return cleaned.strip()
 
+    def _geocode_with_rate_limit(self, query: str):
+        with self.request_lock:
+            elapsed = time.monotonic() - self.last_request_time
+            wait_time = self.min_request_interval - elapsed
+            if wait_time > 0:
+                time.sleep(wait_time)
+
+            location = self.geolocator.geocode(query, timeout=10)
+            self.last_request_time = time.monotonic()
+            return location
+
     def get_coordinates(self, location_query: str) -> Tuple[Optional[float], Optional[float]]:
         """
         Get coordinates for a location query.
@@ -74,7 +89,7 @@ class GeocodingService:
         if location_query not in self.cache:
             try:
                 logger.info(f"Geocoding: {location_query}")
-                location = self.geolocator.geocode(location_query, timeout=10)
+                location = self._geocode_with_rate_limit(location_query)
                 if location:
                     update_cache(location_query, location.latitude, location.longitude)
                     return location.latitude, location.longitude
@@ -105,7 +120,7 @@ class GeocodingService:
         # Geocode cleaned query
         try:
             logger.info(f"Geocoding (cleaned): {cleaned_query}")
-            location = self.geolocator.geocode(cleaned_query, timeout=10)
+            location = self._geocode_with_rate_limit(cleaned_query)
             if location:
                 update_cache(cleaned_query, location.latitude, location.longitude)
                 # Matches original query too

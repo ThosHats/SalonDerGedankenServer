@@ -11,6 +11,10 @@ services:
     environment:
       # Add any environment variables your app needs here
       - TZ=Europe/Berlin
+      - GEOCACHE_FILE=/app/data/geocache.json
+      - GEOCODING_MIN_REQUEST_INTERVAL=1.0
+    volumes:
+      - salon_geocache:/app/data
 
   # Automatic HTTPS Proxy
   caddy:
@@ -29,7 +33,8 @@ services:
 
 networks:
   caddy:
-    external: true
+    name: caddy
 
 volumes:
   caddy_data: {}
+  salon_geocache: {}
