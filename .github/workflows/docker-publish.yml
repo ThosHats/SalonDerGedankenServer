@@ -19,10 +19,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Log in to the Container registry
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -30,7 +30,7 @@ jobs:
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
@@ -38,7 +38,7 @@ jobs:
             type=raw,value=sha-${{ github.sha }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
@@ -51,7 +51,7 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "deploy/docker-compose.yml"
+          source: "deploy/docker-compose.yml,deploy/up.sh"
           target: "/opt/salondergedanken"
           strip_components: 1
 
@@ -64,9 +64,10 @@ jobs:
           script: |
             set -e
             cd /opt/salondergedanken
+            chmod +x ./up.sh
             # Ensure we pull the latest version of the image
             docker compose pull
             # Recreate containers to apply changes
-            docker compose up -d
+            ./up.sh
             # Optional: Clean up old images to save space
             docker image prune -f
