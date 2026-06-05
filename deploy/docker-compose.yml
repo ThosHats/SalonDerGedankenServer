@@ -33,7 +33,7 @@ services:
 
 networks:
   caddy:
-    name: caddy
+    external: true
 
 volumes:
   caddy_data: {}
